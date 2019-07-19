@@ -61,20 +61,20 @@ namespace ProjectTesting.Product.Dao
             }
         }
 
-        public static void Update(ProductEntity product)
+        public static void Update(ProductEntity productEntity)
         {
             try
             {
                 SqlCommand com;
-                com = new SqlCommand("InsertProduct", Connection.ToDatabase());
+                com = new SqlCommand("UpdateProduct", Connection.ToDatabase());
                 com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.AddWithValue("@Id", product.Id);
-                com.Parameters.AddWithValue("@Name", product.Name);
-                com.Parameters.AddWithValue("@Price", product.Price);
-                com.Parameters.AddWithValue("@MadeDate", product.MadeDate);
-                com.Parameters.AddWithValue("@ExpiredDate", product.ExpiredDate);
-                com.Parameters.AddWithValue("@photo", product.Photo);
-                com.Parameters.AddWithValue("@Active", product.Active);
+                com.Parameters.AddWithValue("@Id", productEntity.Id);
+                com.Parameters.AddWithValue("@Name", productEntity.Name);
+                com.Parameters.AddWithValue("@Price", productEntity.Price);
+                com.Parameters.AddWithValue("@MadeDate", productEntity.MadeDate);
+                com.Parameters.AddWithValue("@ExpiredDate", productEntity.ExpiredDate);
+                com.Parameters.AddWithValue("@photo", productEntity.Photo);
+                com.Parameters.AddWithValue("@Active", productEntity.Active);
                 com.ExecuteNonQuery();
             }
             catch (Exception exception)

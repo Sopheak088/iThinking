@@ -84,7 +84,6 @@ namespace ProjectTesting.Product.View
         private void Save()
         {
             ProductEntity productEntity = new ProductEntity();
-            productEntity.Id = Guid.NewGuid();
             productEntity.Name = txtName.Text;
             productEntity.Price = decimal.Parse(Helpers.CurrencyToString(txtPrice.Text).ToString());
             productEntity.MadeDate = DateTime.Parse(dtpMadeDate.Value.ToString("dd/MM/yyyy"));
@@ -93,10 +92,12 @@ namespace ProjectTesting.Product.View
             productEntity.Photo = pic;
             if (getId != Guid.Empty)
             {
+                productEntity.Id = getId;
                 ProductDao.Update(productEntity);
             }
             else
             {
+                productEntity.Id = Guid.NewGuid();
                 ProductDao.Insert(productEntity);
             }
         }
