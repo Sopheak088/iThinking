@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(26, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
@@ -65,7 +65,7 @@
             this.txtName.Location = new System.Drawing.Point(152, 60);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(284, 27);
+            this.txtName.Size = new System.Drawing.Size(284, 31);
             this.txtName.TabIndex = 1;
             // 
             // txtPrice
@@ -73,7 +73,7 @@
             this.txtPrice.Location = new System.Drawing.Point(152, 95);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(284, 27);
+            this.txtPrice.Size = new System.Drawing.Size(284, 31);
             this.txtPrice.TabIndex = 3;
             this.txtPrice.Enter += new System.EventHandler(this.TxtPrice_Enter);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrice_KeyPress);
@@ -85,7 +85,7 @@
             this.label2.Location = new System.Drawing.Point(26, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(61, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Price";
             // 
@@ -95,7 +95,7 @@
             this.label3.Location = new System.Drawing.Point(26, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.Size = new System.Drawing.Size(111, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "MadeDate";
             // 
@@ -105,7 +105,7 @@
             this.dtpMadeDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpMadeDate.Location = new System.Drawing.Point(152, 129);
             this.dtpMadeDate.Name = "dtpMadeDate";
-            this.dtpMadeDate.Size = new System.Drawing.Size(284, 27);
+            this.dtpMadeDate.Size = new System.Drawing.Size(284, 31);
             this.dtpMadeDate.TabIndex = 5;
             // 
             // label4
@@ -114,7 +114,7 @@
             this.label4.Location = new System.Drawing.Point(26, 171);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 20);
+            this.label4.Size = new System.Drawing.Size(130, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "ExpiredDate";
             // 
@@ -124,7 +124,7 @@
             this.dtpExpiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpExpiredDate.Location = new System.Drawing.Point(152, 165);
             this.dtpExpiredDate.Name = "dtpExpiredDate";
-            this.dtpExpiredDate.Size = new System.Drawing.Size(284, 27);
+            this.dtpExpiredDate.Size = new System.Drawing.Size(284, 31);
             this.dtpExpiredDate.TabIndex = 7;
             // 
             // chkActive
@@ -132,7 +132,7 @@
             this.chkActive.AutoSize = true;
             this.chkActive.Location = new System.Drawing.Point(152, 198);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(77, 24);
+            this.chkActive.Size = new System.Drawing.Size(97, 29);
             this.chkActive.TabIndex = 8;
             this.chkActive.Text = "Active";
             this.chkActive.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@
             // 
             // btnSaveNew
             // 
-            this.btnSaveNew.Location = new System.Drawing.Point(140, 295);
+            this.btnSaveNew.Location = new System.Drawing.Point(183, 246);
             this.btnSaveNew.Name = "btnSaveNew";
             this.btnSaveNew.Size = new System.Drawing.Size(141, 31);
             this.btnSaveNew.TabIndex = 10;
@@ -160,7 +160,7 @@
             // 
             // btnSaveClose
             // 
-            this.btnSaveClose.Location = new System.Drawing.Point(295, 295);
+            this.btnSaveClose.Location = new System.Drawing.Point(338, 246);
             this.btnSaveClose.Name = "btnSaveClose";
             this.btnSaveClose.Size = new System.Drawing.Size(141, 31);
             this.btnSaveClose.TabIndex = 11;
@@ -170,7 +170,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(458, 295);
+            this.btnClose.Location = new System.Drawing.Point(501, 246);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(141, 31);
             this.btnClose.TabIndex = 12;
@@ -179,9 +179,9 @@
             // 
             // FrmProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 358);
+            this.ClientSize = new System.Drawing.Size(667, 297);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSaveClose);
             this.Controls.Add(this.btnSaveNew);
@@ -199,6 +199,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProduct";
             this.Text = "FrmProduct";
+            this.Load += new System.EventHandler(this.FrmProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

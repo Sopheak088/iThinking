@@ -3,10 +3,8 @@ using ProjectTesting.Product.Dao;
 using ProjectTesting.Product.Entity;
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
-using System.IO;
 using System.Windows.Forms;
 
 namespace ProjectTesting.Product.View
@@ -30,7 +28,8 @@ namespace ProjectTesting.Product.View
                     dtpMadeDate.Value = DateTime.Parse(dt.Rows[0]["MadeDate"].ToString());
                     dtpExpiredDate.Value = DateTime.Parse(dt.Rows[0]["ExpiredDate"].ToString());
                     pic = ProductDao.GetPhoto(getId);
-                    picProduct.Image = Helpers.ByteArrayToImage(pic);
+                    if (pic != null)
+                        picProduct.Image = Helpers.ByteArrayToImage(pic);
                 }
             }
         }
@@ -79,6 +78,13 @@ namespace ProjectTesting.Product.View
 
         private void BtnSaveNew_Click(object sender, EventArgs e)
         {
+            Save();
+            getId = Guid.Empty;
+            pic = null;
+            txtName.Text = txtPrice.Text = null;
+            dtpMadeDate.Value = dtpExpiredDate.Value = DateTime.Today;
+            chkActive.Checked = false;
+            picProduct.Image = null;
         }
 
         private void Save()
@@ -105,7 +111,17 @@ namespace ProjectTesting.Product.View
         private void BtnSaveClose_Click(object sender, EventArgs e)
         {
             Save();
+            this.Hide();
+            FrmProductList frm = new FrmProductList();
+            frm.ShowDialog();
             this.Close();
+        }
+
+        private void FrmProduct_Load(object sender, EventArgs e)
+        {
+            //cboPro.DataSource = ProductDao.GetProductToComboBox();
+            //cboPro.ValueMember = "ID";
+            //cboPro.DisplayMember = "Name";
         }
     }
 }

@@ -120,5 +120,27 @@ namespace ProjectTesting.Product.Dao
             Connection.ToDatabase();
             return cm.ExecuteScalar() as byte[];
         }
+
+        public static DataTable GetProductToComboBox()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT ID, Name FROM PRODUCT", Connection.ToDatabase());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Connection.ToDatabase().Close();
+            }
+
+            return dt;
+        }
     }
 }
