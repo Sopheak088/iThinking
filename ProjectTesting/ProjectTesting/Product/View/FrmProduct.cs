@@ -27,6 +27,7 @@ namespace ProjectTesting.Product.View
                     txtPrice.Text = dt.Rows[0]["Price"].ToString();
                     dtpMadeDate.Value = DateTime.Parse(dt.Rows[0]["MadeDate"].ToString());
                     dtpExpiredDate.Value = DateTime.Parse(dt.Rows[0]["ExpiredDate"].ToString());
+                    chkActive.Checked = (bool)dt.Rows[0]["Active"];
                     pic = ProductDao.GetPhoto(getId);
                     if (pic != null)
                         picProduct.Image = Helpers.ByteArrayToImage(pic);
@@ -111,10 +112,7 @@ namespace ProjectTesting.Product.View
         private void BtnSaveClose_Click(object sender, EventArgs e)
         {
             Save();
-            this.Hide();
-            FrmProductList frm = new FrmProductList();
-            frm.ShowDialog();
-            this.Close();
+            BtnClose_Click(sender, e);
         }
 
         private void FrmProduct_Load(object sender, EventArgs e)
@@ -122,6 +120,14 @@ namespace ProjectTesting.Product.View
             //cboPro.DataSource = ProductDao.GetProductToComboBox();
             //cboPro.ValueMember = "ID";
             //cboPro.DisplayMember = "Name";
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmProductList frm = new FrmProductList();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }
