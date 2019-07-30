@@ -114,11 +114,22 @@ namespace ProjectTesting.Product.Dao
 
         public static byte[] GetPhoto(Guid id)
         {
-            string query = "SELECT Photo FROM PRODUCT WHERE ID = '" + id + "'";
-            SqlCommand cm = Connection.ToDatabase().CreateCommand();
-            cm.CommandText = query;
-            Connection.ToDatabase();
-            return cm.ExecuteScalar() as byte[];
+            try
+            {
+                string query = "SELECT Photo FROM PRODUCT WHERE ID = '" + id + "'";
+                SqlCommand cm = Connection.ToDatabase().CreateCommand();
+                cm.CommandText = query;
+                return cm.ExecuteScalar() as byte[];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                Connection.ToDatabase().Close();
+            }
         }
 
         public static DataTable GetProductToComboBox()
@@ -139,7 +150,6 @@ namespace ProjectTesting.Product.Dao
             {
                 Connection.ToDatabase().Close();
             }
-
             return dt;
         }
     }
