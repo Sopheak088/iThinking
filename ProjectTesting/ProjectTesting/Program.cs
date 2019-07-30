@@ -1,4 +1,5 @@
-﻿using ProjectTesting.Product.View;
+﻿using ProjectTesting.Customer.View;
+using ProjectTesting.Product.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace ProjectTesting
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProductList());
+            Application.Run(new FrmCustomerList());
         }
     }
 }
