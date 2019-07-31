@@ -1,4 +1,6 @@
-﻿using ProjectTesting.Helper;
+﻿using ProjectTesting.Customer.Dao;
+using ProjectTesting.Customer.Entity;
+using ProjectTesting.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +15,7 @@ namespace ProjectTesting.Customer.View
 {
     public partial class FrmCustomer : Form
     {
-        public FrmCustomer()
+        public FrmCustomer(Guid? id = null)
         {
             InitializeComponent();
         }
@@ -35,8 +37,45 @@ namespace ProjectTesting.Customer.View
             }
         }
 
+        private void Save()
+        {
+            CustomerEntity customerEntity = new CustomerEntity();
+            customerEntity.Name = txtName.Text;
+            customerEntity.Phone = txtPhone.Text;
+            customerEntity.Photo = pic;
+            if (getId != Guid.Empty)
+            {
+                customerEntity.Id = getId;
+                CustomerDao.Update(customerEntity);
+            }
+            else
+            {
+                customerEntity.Id = Guid.NewGuid();
+                CustomerDao.Insert(customerEntity);
+            }
+        }
+
         private void BtnSaveNew_Click(object sender, EventArgs e)
         {
+            Save();
+            getId = Guid.Empty;
+            pic = null;
+            txtName.Text = txtPhone.Text = null;
+            picCustomer.Image = null;
+        }
+
+        private void BtnSaveClose_Click(object sender, EventArgs e)
+        {
+            Save();
+            BtnClose_Click(sender, e);
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmCustomerList frm = new FrmCustomerList();
+            frm.ShowDialog();
+            //this.Close();
         }
     }
 }

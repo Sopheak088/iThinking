@@ -76,7 +76,7 @@
             // picCustomer
             // 
             this.picCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picCustomer.Location = new System.Drawing.Point(480, 33);
+            this.picCustomer.Location = new System.Drawing.Point(501, 24);
             this.picCustomer.Name = "picCustomer";
             this.picCustomer.Size = new System.Drawing.Size(166, 214);
             this.picCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,6 +102,7 @@
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnSaveClose
             // 
@@ -111,6 +112,7 @@
             this.btnSaveClose.TabIndex = 7;
             this.btnSaveClose.Text = "SaveClose";
             this.btnSaveClose.UseVisualStyleBackColor = true;
+            this.btnSaveClose.Click += new System.EventHandler(this.BtnSaveClose_Click);
             // 
             // FrmCustomer
             // 

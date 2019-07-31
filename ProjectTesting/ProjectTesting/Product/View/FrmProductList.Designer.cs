@@ -53,11 +53,12 @@
             this.dgvProduct.Size = new System.Drawing.Size(888, 494);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProduct_CellClick);
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProduct_CellContentClick);
             this.dgvProduct.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgvProduct_MouseClick);
             // 
             // FrmProductList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 494);
             this.Controls.Add(this.dgvProduct);

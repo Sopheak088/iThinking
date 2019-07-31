@@ -57,5 +57,53 @@ namespace ProjectTesting.Customer.Dao
                 Connection.ToDatabase().Close();
             }
         }
+
+        public static void Update(CustomerEntity customer)
+        {
+            try
+            {
+                SqlCommand com;
+                com = new SqlCommand("UpdateCustomer", Connection.ToDatabase());
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@Id", customer.Id);
+                com.Parameters.AddWithValue("@Name", customer.Name);
+                com.Parameters.AddWithValue("@Phone", customer.Phone);
+                com.Parameters.AddWithValue("@Photo", customer.Photo);
+                com.ExecuteNonQuery();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), @"Could not find Stored Procedure", MessageBoxButtons.RetryCancel);
+            }
+            finally
+            {
+                Connection.ToDatabase().Close();
+            }
+        }
+
+        public static DataTable GetCustomerById(Guid id)
+        {
+            DataTable dataTable = new DataTable();
+            string query = "SELECT * FROM CUSTOMER WHERE ID = '" + id + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, Connection.ToDatabase());
+                // create data adapter
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                // this will query your database and return the result to your datatable
+                da.Fill(dataTable);
+                da.Dispose();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "Check you SQL",
+        MessageBoxButtons.RetryCancel);
+            }
+            finally
+            {
+                Connection.ToDatabase().Close();
+            }
+            return dataTable;
+        }
     }
 }

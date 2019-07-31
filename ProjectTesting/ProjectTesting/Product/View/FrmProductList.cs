@@ -79,5 +79,9 @@ namespace ProjectTesting.Product.View
                 getId = Guid.Parse(row.Cells[0].Value.ToString());
             }
         }
+
+        private void DgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }
