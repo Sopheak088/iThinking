@@ -103,3 +103,50 @@ BEGIN
 SELECT * FROM CUSTOMER
 END
 GO
+
+CREATE TABLE SUPPLIER(
+	ID UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+	Name NVARCHAR(MAX) COLLATE Khmer_100_BIN,
+	Phone VARCHAR(13),
+	Descript NVARCHAR(MAX) COLLATE khmer_100_BIN, 
+	Photo VARBINARY(MAX))
+	GO
+	CREATE PROCEDURE InsertSupplier(
+								@ID UNIQUEIDENTIFIER,
+								@Name NVARCHAR(max),
+								@Phone VARCHAR(13),
+								@Descritp NVARCHAR(MAX),
+								@Photo VARBINARY(MAX)								
+							  )
+AS 
+BEGIN
+	INSERT INTO SUPPLIER
+	VALUES(@ID,@Name,@phone,@Descritp,@Photo)
+END
+Go
+CREATE PROCEDURE UpdateSupplier(
+				@ID UNIQUEIDENTIFIER,
+				@Name NVARCHAR(MAX),
+				@Descritp NVARCHAR(MAX),
+				@Phone VARCHAR(13),
+				@Photo VARBINARY(MAX)
+
+
+)
+AS
+BEGIN
+UPDATE SUPPLIER
+SET
+	Name=@Name,
+	Phone=@Phone,
+	Descript=@Descritp,
+	Photo=@Photo
+	WHERE ID=@ID
+	END
+	GO
+	CREATE PROCEDURE ListAllSupplier
+AS
+BEGIN
+SELECT * FROM SUPPLIER
+END
+GO

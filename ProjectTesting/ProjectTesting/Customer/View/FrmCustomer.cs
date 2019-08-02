@@ -14,10 +14,26 @@ using System.Windows.Forms;
 namespace ProjectTesting.Customer.View
 {
     public partial class FrmCustomer : Form
+
     {
         public FrmCustomer(Guid? id = null)
         {
             InitializeComponent();
+
+            if (id != null)
+            {
+                getId = Guid.Parse(id.ToString());
+                DataTable dt = CustomerDao.GetCustomerById(getId);
+                if (dt != null)
+                {
+                    txtName.Text = dt.Rows[0]["Name"].ToString();
+                    txtPhone.Text = dt.Rows[0]["Phone"].ToString();
+
+                    pic = CustomerDao.GetPhoto(getId);
+                    if (pic != null)
+                        picCustomer.Image = Helpers.ByteArrayToImage(pic);
+                }
+            }
         }
 
         private Guid getId = Guid.Empty;

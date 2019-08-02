@@ -105,5 +105,25 @@ namespace ProjectTesting.Customer.Dao
             }
             return dataTable;
         }
+
+        public static byte[] GetPhoto(Guid id)
+        {
+            try
+            {
+                string query = "SELECT Photo FROM CUSTOMER WHERE ID = '" + id + "'";
+                SqlCommand cm = Connection.ToDatabase().CreateCommand();
+                cm.CommandText = query;
+                return cm.ExecuteScalar() as byte[];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                Connection.ToDatabase().Close();
+            }
+        }
     }
 }
