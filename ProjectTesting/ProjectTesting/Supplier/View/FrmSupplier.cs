@@ -13,7 +13,7 @@ namespace ProjectTesting.Supplier.View
     public partial class FrmSupplier : Form
     {
         private Guid getId = Guid.Empty;
-        private byte[] pic = null;
+       // private byte[] pic = null;
 
         public FrmSupplier(Guid? id = null)
         {
