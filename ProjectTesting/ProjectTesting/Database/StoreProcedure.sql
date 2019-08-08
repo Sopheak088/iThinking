@@ -125,3 +125,41 @@ BEGIN
 SELECT * FROM SUPPLIER
 END
 GO
+CREATE PROCEDURE InsertUser(
+								@ID UNIQUEIDENTIFIER,
+								@UserName VARCHAR(max),
+								@UserPassword VARCHAR(MAX),
+								@Position VARCHAR(MAX)
+											
+							  )
+AS 
+BEGIN
+	INSERT INTO [USER]
+	VALUES(@ID,@UserName,@UserPassword,@Position)
+END
+Go
+CREATE PROCEDURE UpdateUser(
+				@ID UNIQUEIDENTIFIER,
+				@UserName VARCHAR(MAX),
+				@UserPassword VARCHAR(MAX),
+				@Position VARCHAR(MAX)
+
+
+)
+AS
+BEGIN
+UPDATE [USER]
+SET
+	UserName=@UserName,
+	UserPassword=@UserPassword,
+	Position=@Position
+	WHERE ID=@ID
+
+END
+Go
+CREATE PROCEDURE ListAllUser
+AS
+BEGIN
+SELECT * FROM [USER]
+END
+GO
