@@ -162,6 +162,8 @@
     <Folder Include="Manager\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\StoreProcedure.sql" />
+    <Content Include="Database\Structure.sql" />
     <Content Include="Database\Davin\Alter.sql" />
     <Content Include="Database\Samnang\Alter.sql" />
   </ItemGroup>
