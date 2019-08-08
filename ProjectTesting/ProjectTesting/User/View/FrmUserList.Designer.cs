@@ -41,11 +41,13 @@
             this.dgvUser.EnableHeadersVisualStyles = false;
             this.dgvUser.Location = new System.Drawing.Point(0, 0);
             this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
             this.dgvUser.RowHeadersWidth = 62;
             this.dgvUser.RowTemplate.Height = 28;
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(800, 450);
             this.dgvUser.TabIndex = 0;
-            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUser_CellContentClick);
+            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUser_CellClick);
             this.dgvUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgvUser_MouseClick);
             // 
             // FrmUserList
@@ -58,6 +60,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUserList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListUser";
             this.Load += new System.EventHandler(this.FrmUserList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();

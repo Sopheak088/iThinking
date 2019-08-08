@@ -27,7 +27,7 @@ namespace ProjectTesting.User.View
                 if (dt != null)
                 {
                     txtUserName.Text = dt.Rows[0]["UserName"].ToString();
-                    txtPassword.Text = dt.Rows[0]["UserPassword"].ToString();
+                    txtUserPassword.Text = dt.Rows[0]["UserPassword"].ToString();
                     txtPosition.Text = dt.Rows[0]["Position"].ToString();
                 }
             }
@@ -37,7 +37,7 @@ namespace ProjectTesting.User.View
         {
             UserEntity userEntity = new UserEntity();
             userEntity.UserName = txtUserName.Text;
-            userEntity.UserPassword = txtPassword.Text;
+            userEntity.UserPassword = txtUserPassword.Text;
             userEntity.Position = txtPosition.Text;
 
             if (getId != Guid.Empty)
@@ -66,7 +66,7 @@ namespace ProjectTesting.User.View
             //MessageBox.Show("Data was saved");
             getId = Guid.Empty;
 
-            txtUserName.Text = txtPassword.Text = txtPosition.Text = null;
+            txtUserName.Text = txtUserPassword.Text = txtPosition.Text = null;
         }
 
         private void BtnSaveClose_Click(object sender, EventArgs e)
@@ -77,6 +77,10 @@ namespace ProjectTesting.User.View
             FrmUserList frm = new FrmUserList();
             frm.ShowDialog();
             this.Close();
+        }
+
+        private void FrmUser_Load(object sender, EventArgs e)
+        {
         }
     }
 }

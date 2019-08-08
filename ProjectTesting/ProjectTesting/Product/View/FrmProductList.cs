@@ -20,6 +20,7 @@ namespace ProjectTesting.Product.View
             dgvProduct.ColumnHeadersDefaultCellStyle.Font =
                 new Font("Time News Roman", 14, FontStyle.Bold);
             dgvProduct.DefaultCellStyle.Font = new Font("Khmer OS System", 12);
+            dgvProduct.Columns["ID"].Visible = false;
             dgvProduct.Columns["Name"].Width = 200; //define column width
             dgvProduct.Columns["Price"].DefaultCellStyle.Format = "c";
             dgvProduct.Columns["MadeDate"].DefaultCellStyle.Format = "dd/MM/yyyy";

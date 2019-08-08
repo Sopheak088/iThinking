@@ -38,7 +38,7 @@ namespace ProjectTesting.User.Dao
         public static DataTable GetUserById(Guid id)
         {
             DataTable dataTable = new DataTable();
-            string query = "SELECT * FROM USER WHERE ID = '" + id + "'";
+            string query = "SELECT * FROM [USER] WHERE ID = '" + id + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand(query, Connection.ToDatabase());

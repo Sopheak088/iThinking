@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,13 +56,13 @@
             this.txtUserName.Size = new System.Drawing.Size(267, 38);
             this.txtUserName.TabIndex = 1;
             // 
-            // txtPassword
+            // txtUserPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(185, 119);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(267, 38);
-            this.txtPassword.TabIndex = 3;
+            this.txtUserPassword.Location = new System.Drawing.Point(185, 119);
+            this.txtUserPassword.Name = "txtUserPassword";
+            this.txtUserPassword.PasswordChar = '*';
+            this.txtUserPassword.Size = new System.Drawing.Size(267, 38);
+            this.txtUserPassword.TabIndex = 3;
             // 
             // label2
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.btnSaveNew);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
@@ -140,7 +140,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUser";
+            this.Load += new System.EventHandler(this.FrmUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,7 +152,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label3;
