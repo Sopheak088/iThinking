@@ -64,6 +64,20 @@
     <Compile Include="Customer\View\FrmCustomerList.Designer.cs">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\Dao\EmployeeDao.cs" />
+    <Compile Include="Employee\Entity\EmployeeEntity.cs" />
+    <Compile Include="Employee\View\FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\View\FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\View\FrmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\View\FrmEmployeeList.Designer.cs">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\Connection.cs" />
     <Compile Include="Helper\Helpers.cs" />
     <Compile Include="Product\Dao\ProductDao.cs" />
@@ -101,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\View\FrmCustomerList.resx">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\View\FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\View\FrmEmployeeList.resx">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\View\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>

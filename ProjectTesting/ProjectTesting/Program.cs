@@ -19,7 +19,7 @@ namespace ProjectTesting
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSupplierList());
+            Application.Run(new FrmProductList());
         }
     }
 }
