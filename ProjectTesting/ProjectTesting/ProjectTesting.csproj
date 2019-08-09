@@ -180,6 +180,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Database\StoreProcedure.sql" />
+    <Content Include="Database\Structure.sql" />
     <Content Include="Database\Davin\Alter.sql" />
     <Content Include="Database\Samnang\Alter.sql" />
     <None Include="Resources\icons8_move_by_trolley_50px.png" />
