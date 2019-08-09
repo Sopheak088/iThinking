@@ -191,11 +191,28 @@ SET
 
 END
 Go
-CREATE PROCEDURE ListAllUser
-AS
-BEGIN
-SELECT * FROM [USER]
-END
-
+--CREATE PROCEDURE ListAllUser
+--AS
+--BEGIN
+--SELECT * FROM [USER]
+--END
+--GO
+--CREATE PROCEDURE UserLogin(
+--						@uid VARCHAR(MAX),
+--						@pwd VARCHAR(MAX)
+--						)
+--AS
+--BEGIN
+--SELECT * FROM [USER]
+--WHERE LOWER(UserName)=LOWER(@uid)
+--AND UserPassword=@pwd
+--END
+GO
+create procedure UserLogin(@uid varchar(max),@pwd varchar(max))
+as
+begin
+	select * from [USER]
+	where [UserName] = @uid and [UserPassword] =@pwd
+end
 
 	
