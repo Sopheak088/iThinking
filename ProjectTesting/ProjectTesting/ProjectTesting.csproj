@@ -64,22 +64,21 @@
     <Compile Include="Customer\View\FrmCustomerList.Designer.cs">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\Dao\EmployeeDao.cs" />
-    <Compile Include="Employee\Entity\EmployeeEntity.cs" />
-    <Compile Include="Employee\View\FrmEmployee.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee\View\FrmEmployee.Designer.cs">
-      <DependentUpon>FrmEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employee\View\FrmEmployeeList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employee\View\FrmEmployeeList.Designer.cs">
-      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Connection.cs" />
+    <Compile Include="Helper\FormClose.cs" />
     <Compile Include="Helper\Helpers.cs" />
+    <Compile Include="Manager\FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\Dao\ProductDao.cs" />
     <Compile Include="Product\Entity\ProductEntity.cs" />
     <Compile Include="Product\View\FrmProduct.cs">
@@ -96,20 +95,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Supplier\Dao\SupplierDao.cs" />
-    <Compile Include="Supplier\Entity\SupplierEntity.cs" />
-    <Compile Include="Supplier\View\FrmSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Supplier\View\FrmSupplier.Designer.cs">
-      <DependentUpon>FrmSupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Supplier\View\FrmSupplierList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Supplier\View\FrmSupplierList.Designer.cs">
-      <DependentUpon>FrmSupplierList.cs</DependentUpon>
-    </Compile>
     <Compile Include="User\Dao\UserDao.cs" />
     <Compile Include="User\Entity\UserEntity.cs" />
     <Compile Include="User\View\FrmUserList.cs">
@@ -131,11 +116,11 @@
     <EmbeddedResource Include="Customer\View\FrmCustomerList.resx">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\View\FrmEmployee.resx">
-      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\View\FrmEmployeeList.resx">
-      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    <EmbeddedResource Include="Manager\FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\View\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
@@ -152,13 +137,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Supplier\View\FrmSupplier.resx">
-      <DependentUpon>FrmSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Supplier\View\FrmSupplierList.resx">
-      <DependentUpon>FrmSupplierList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User\View\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,12 +158,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Manager\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Database\StoreProcedure.sql" />
+    <Content Include="Database\Structure.sql" />
     <Content Include="Database\Davin\Alter.sql" />
     <Content Include="Database\Samnang\Alter.sql" />
+    <None Include="Resources\icons8_User_50px_1.png" />
+    <None Include="Resources\icons8_move_by_trolley_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

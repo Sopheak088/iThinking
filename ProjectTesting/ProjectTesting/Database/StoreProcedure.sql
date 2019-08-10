@@ -1,13 +1,3 @@
-CREATE TABLE PRODUCT(
-	ID UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
-	Name NVARCHAR(MAX) COLLATE Khmer_100_BIN,
-	Price MONEY,
-	MadeDate DATE,
-	ExpiredDate DATE,
-	Photo VARBINARY(MAX),
-	Active BIT
-)
-GO
 CREATE PROCEDURE InsertProduct(
 								@Id UNIQUEIDENTIFIER,
 								@Name nvarchar(max),
@@ -50,16 +40,8 @@ AS
 BEGIN
 	SELECT * FROM PRODUCT
 END
-GO
-CREATE TABLE CUSTOMER (
-ID UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
-Name NVARCHAR(MAX) COLLATE Khmer_100_BIN,
-Phone VARCHAR(13),
-Photo VARBINARY(MAX)
-)
-GO
 
-
+GO
 CREATE PROCEDURE InsertCustomer(
 				@ID UNIQUEIDENTIFIER,
 				@Name NVARCHAR(MAX),
@@ -104,14 +86,7 @@ SELECT * FROM CUSTOMER
 END
 GO
 
-CREATE TABLE SUPPLIER(
-	ID UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
-	Name NVARCHAR(MAX) COLLATE Khmer_100_BIN,
-	Phone VARCHAR(13),
-	Descript NVARCHAR(MAX) COLLATE khmer_100_BIN, 
-	Photo VARBINARY(MAX))
-	GO
-	CREATE PROCEDURE InsertSupplier(
+CREATE PROCEDURE InsertSupplier(
 								@ID UNIQUEIDENTIFIER,
 								@Name NVARCHAR(max),
 								@Phone VARCHAR(13),
@@ -150,15 +125,6 @@ BEGIN
 SELECT * FROM SUPPLIER
 END
 GO
-CREATE TABLE [USER](
-		
-	ID UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
-	UserName VARCHAR(MAX),
-	UserPassword  VARCHAR(MAX),
-	Position VARCHAR(MAX)
-	
-)
-Go
 CREATE PROCEDURE InsertUser(
 								@ID UNIQUEIDENTIFIER,
 								@UserName VARCHAR(max),
@@ -191,28 +157,9 @@ SET
 
 END
 Go
---CREATE PROCEDURE ListAllUser
---AS
---BEGIN
---SELECT * FROM [USER]
---END
---GO
---CREATE PROCEDURE UserLogin(
---						@uid VARCHAR(MAX),
---						@pwd VARCHAR(MAX)
---						)
---AS
---BEGIN
---SELECT * FROM [USER]
---WHERE LOWER(UserName)=LOWER(@uid)
---AND UserPassword=@pwd
---END
+CREATE PROCEDURE ListAllUser
+AS
+BEGIN
+SELECT * FROM [USER]
+END
 GO
-create procedure UserLogin(@uid varchar(max),@pwd varchar(max))
-as
-begin
-	select * from [USER]
-	where [UserName] = @uid and [UserPassword] =@pwd
-end
-
-	
