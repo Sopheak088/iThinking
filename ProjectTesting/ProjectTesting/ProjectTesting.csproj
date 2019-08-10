@@ -110,6 +110,21 @@
     <Compile Include="Supplier\View\FrmSupplierList.Designer.cs">
       <DependentUpon>FrmSupplierList.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\Dao\UserDao.cs" />
+    <Compile Include="User\Entity\UserEntity.cs" />
+    <Compile Include="User\View\FrmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\FrmUserList.Designer.cs">
+      <DependentUpon>FrmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\View\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\View\Msg.cs" />
     <EmbeddedResource Include="Customer\View\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier\View\FrmSupplierList.resx">
       <DependentUpon>FrmSupplierList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\View\FrmUserList.resx">
+      <DependentUpon>FrmUserList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
