@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnProduct = new System.Windows.Forms.Button();
-            this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,14 +51,48 @@
             this.panel1.Size = new System.Drawing.Size(234, 450);
             this.panel1.TabIndex = 0;
             // 
+            // lblTime
+            // 
+            this.lblTime.Location = new System.Drawing.Point(12, 414);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(215, 27);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "label2";
+            // 
+            // lblDate
+            // 
+            this.lblDate.Location = new System.Drawing.Point(12, 371);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(215, 32);
+            this.lblDate.TabIndex = 0;
+            this.lblDate.Text = "label1";
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.btnProduct);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(234, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(566, 450);
             this.panel2.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
+            // 
+            // btnUser
+            // 
+            this.btnUser.Image = global::ProjectTesting.Properties.Resources.icons8_User_50px_1;
+            this.btnUser.Location = new System.Drawing.Point(176, 12);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(146, 96);
+            this.btnUser.TabIndex = 1;
+            this.btnUser.Text = "User";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.BtnUser_Click);
             // 
             // btnProduct
             // 
@@ -70,27 +105,6 @@
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProduct.UseVisualStyleBackColor = true;
             this.btnProduct.Click += new System.EventHandler(this.BtnProduct_Click);
-            // 
-            // lblDate
-            // 
-            this.lblDate.Location = new System.Drawing.Point(12, 371);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(215, 32);
-            this.lblDate.TabIndex = 0;
-            this.lblDate.Text = "label1";
-            // 
-            // lblTime
-            // 
-            this.lblTime.Location = new System.Drawing.Point(12, 414);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(215, 27);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "label2";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // FrmMain
             // 
@@ -116,5 +130,6 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnUser;
     }
 }

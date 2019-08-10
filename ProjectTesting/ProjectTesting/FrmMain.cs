@@ -1,4 +1,5 @@
 ﻿using ProjectTesting.Product.View;
+using ProjectTesting.User.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,16 +26,24 @@ namespace ProjectTesting
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
-        }
-
         private void BtnProduct_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmProductList ul = new FrmProductList();
             ul.ShowDialog();
+            this.Close();
+        }
+
+        private void Timer1_Tick_1(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void BtnUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmUserList frmUserList = new FrmUserList();
+            frmUserList.ShowDialog();
             this.Close();
         }
     }
