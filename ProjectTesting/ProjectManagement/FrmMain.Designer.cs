@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ribbon1 = new Janus.Windows.Ribbon.Ribbon();
-            this.tabCusomerAndSale = new Janus.Windows.Ribbon.RibbonTab();
-            this.uiPanelManager1 = new Janus.Windows.UI.Dock.UIPanelManager(this.components);
-            this.panelList = new Janus.Windows.UI.Dock.UIPanelGroup();
-            this.tabSupplierAndPurchase = new Janus.Windows.Ribbon.RibbonTab();
-            this.tabWarehouseAndProduct = new Janus.Windows.Ribbon.RibbonTab();
-            this.tabAccountant = new Janus.Windows.Ribbon.RibbonTab();
-            this.tabSystemAndManagement = new Janus.Windows.Ribbon.RibbonTab();
             this.btnExit = new Janus.Windows.Ribbon.DropDownCommand();
-            this.ribbonGroup1 = new Janus.Windows.Ribbon.RibbonGroup();
+            this.tabCusomerAndSale = new Janus.Windows.Ribbon.RibbonTab();
             this.ribbonGroup2 = new Janus.Windows.Ribbon.RibbonGroup();
             this.groupCustomer = new Janus.Windows.Ribbon.RibbonGroup();
             this.cmdCustomerProfile = new Janus.Windows.Ribbon.ButtonCommand();
+            this.tabSupplierAndPurchase = new Janus.Windows.Ribbon.RibbonTab();
             this.ribbonGroup3 = new Janus.Windows.Ribbon.RibbonGroup();
             this.cmdSupplierProfile = new Janus.Windows.Ribbon.ButtonCommand();
             this.cmdPurchase = new Janus.Windows.Ribbon.DropDownCommand();
             this.cmdNewPurchase = new Janus.Windows.Ribbon.DropDownCommand();
             this.cmdPurchaseList = new Janus.Windows.Ribbon.DropDownCommand();
+            this.tabWarehouseAndProduct = new Janus.Windows.Ribbon.RibbonTab();
+            this.tabAccountant = new Janus.Windows.Ribbon.RibbonTab();
+            this.tabSystemAndManagement = new Janus.Windows.Ribbon.RibbonTab();
+            this.uiPanelManager1 = new Janus.Windows.UI.Dock.UIPanelManager(this.components);
+            this.panelList = new Janus.Windows.UI.Dock.UIPanelGroup();
+            this.ribbonGroup1 = new Janus.Windows.Ribbon.RibbonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelList)).BeginInit();
@@ -82,6 +82,13 @@
             this.tabSystemAndManagement});
             this.ribbon1.Text = "";
             // 
+            // btnExit
+            // 
+            this.btnExit.Key = "dropDownCommand1";
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnExit_Click);
+            // 
             // tabCusomerAndSale
             // 
             this.tabCusomerAndSale.Groups.AddRange(new Janus.Windows.Ribbon.RibbonGroup[] {
@@ -90,68 +97,6 @@
             this.tabCusomerAndSale.Key = "ribbonTab1";
             this.tabCusomerAndSale.Name = "tabCusomerAndSale";
             this.tabCusomerAndSale.Text = "Customer & Sale";
-            // 
-            // uiPanelManager1
-            // 
-            this.uiPanelManager1.ContainerControl = this;
-            this.panelList.Id = new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31");
-            this.panelList.StaticGroup = true;
-            this.uiPanelManager1.Panels.Add(this.panelList);
-            // 
-            // Design Time Panel Info:
-            // 
-            this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(825, 209), true);
-            this.uiPanelManager1.EndPanelInfo();
-            // 
-            // panelList
-            // 
-            this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
-            this.panelList.Location = new System.Drawing.Point(3, 171);
-            this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(825, 209);
-            this.panelList.TabIndex = 4;
-            this.panelList.Text = "Panel 0";
-            // 
-            // tabSupplierAndPurchase
-            // 
-            this.tabSupplierAndPurchase.Groups.AddRange(new Janus.Windows.Ribbon.RibbonGroup[] {
-            this.ribbonGroup3});
-            this.tabSupplierAndPurchase.Key = "ribbonTab2";
-            this.tabSupplierAndPurchase.Name = "tabSupplierAndPurchase";
-            this.tabSupplierAndPurchase.Text = "Supplier & Purchase";
-            // 
-            // tabWarehouseAndProduct
-            // 
-            this.tabWarehouseAndProduct.Key = "ribbonTab3";
-            this.tabWarehouseAndProduct.Name = "tabWarehouseAndProduct";
-            this.tabWarehouseAndProduct.Text = "Warehouse & Product";
-            // 
-            // tabAccountant
-            // 
-            this.tabAccountant.Key = "ribbonTab4";
-            this.tabAccountant.Name = "tabAccountant";
-            this.tabAccountant.Text = "Accountant";
-            // 
-            // tabSystemAndManagement
-            // 
-            this.tabSystemAndManagement.Key = "ribbonTab5";
-            this.tabSystemAndManagement.Name = "tabSystemAndManagement";
-            this.tabSystemAndManagement.Text = "System & Management";
-            // 
-            // btnExit
-            // 
-            this.btnExit.Key = "dropDownCommand1";
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Text = "Exit";
-            this.btnExit.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnExit_Click);
-            // 
-            // ribbonGroup1
-            // 
-            this.ribbonGroup1.DialogButtonSuperTipSettings.ImageListProvider = this.ribbonGroup1;
-            this.ribbonGroup1.Key = "ribbonGroup1";
-            this.ribbonGroup1.Name = "ribbonGroup1";
-            this.ribbonGroup1.Text = "Group 0";
             // 
             // ribbonGroup2
             // 
@@ -175,6 +120,14 @@
             this.cmdCustomerProfile.Key = "buttonCommand1";
             this.cmdCustomerProfile.Name = "cmdCustomerProfile";
             this.cmdCustomerProfile.Text = "Customer Profile";
+            // 
+            // tabSupplierAndPurchase
+            // 
+            this.tabSupplierAndPurchase.Groups.AddRange(new Janus.Windows.Ribbon.RibbonGroup[] {
+            this.ribbonGroup3});
+            this.tabSupplierAndPurchase.Key = "ribbonTab2";
+            this.tabSupplierAndPurchase.Name = "tabSupplierAndPurchase";
+            this.tabSupplierAndPurchase.Text = "Supplier & Purchase";
             // 
             // ribbonGroup3
             // 
@@ -217,15 +170,63 @@
             this.cmdPurchaseList.Name = "cmdPurchaseList";
             this.cmdPurchaseList.Text = "Purchase List";
             // 
+            // tabWarehouseAndProduct
+            // 
+            this.tabWarehouseAndProduct.Key = "ribbonTab3";
+            this.tabWarehouseAndProduct.Name = "tabWarehouseAndProduct";
+            this.tabWarehouseAndProduct.Text = "Warehouse & Product";
+            // 
+            // tabAccountant
+            // 
+            this.tabAccountant.Key = "ribbonTab4";
+            this.tabAccountant.Name = "tabAccountant";
+            this.tabAccountant.Text = "Accountant";
+            // 
+            // tabSystemAndManagement
+            // 
+            this.tabSystemAndManagement.Key = "ribbonTab5";
+            this.tabSystemAndManagement.Name = "tabSystemAndManagement";
+            this.tabSystemAndManagement.Text = "System & Management";
+            // 
+            // uiPanelManager1
+            // 
+            this.uiPanelManager1.ContainerControl = this;
+            this.panelList.Id = new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31");
+            this.panelList.StaticGroup = true;
+            this.uiPanelManager1.Panels.Add(this.panelList);
+            // 
+            // Design Time Panel Info:
+            // 
+            this.uiPanelManager1.BeginPanelInfo();
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(825, 210), true);
+            this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
+            this.uiPanelManager1.EndPanelInfo();
+            // 
+            // panelList
+            // 
+            this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
+            this.panelList.Location = new System.Drawing.Point(3, 171);
+            this.panelList.Name = "panelList";
+            this.panelList.Size = new System.Drawing.Size(825, 210);
+            this.panelList.TabIndex = 4;
+            this.panelList.Text = "Panel 0";
+            // 
+            // ribbonGroup1
+            // 
+            this.ribbonGroup1.DialogButtonSuperTipSettings.ImageListProvider = this.ribbonGroup1;
+            this.ribbonGroup1.Key = "ribbonGroup1";
+            this.ribbonGroup1.Name = "ribbonGroup1";
+            this.ribbonGroup1.Text = "Group 0";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 383);
+            this.ClientSize = new System.Drawing.Size(831, 384);
             this.Controls.Add(this.panelList);
             this.Controls.Add(this.ribbon1);
             this.Font = new System.Drawing.Font("Hanuman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
