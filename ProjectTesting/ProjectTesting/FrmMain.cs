@@ -1,4 +1,5 @@
 ﻿using ProjectTesting.Product.View;
+using ProjectTesting.Supplier.View;
 using ProjectTesting.User.View;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,14 @@ namespace ProjectTesting
             this.Hide();
             FrmUserList frmUserList = new FrmUserList();
             frmUserList.ShowDialog();
+            this.Close();
+        }
+
+        private void BtnSupplier_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmListAllSupplier frm = new FrmListAllSupplier();
+            frm.ShowDialog();
             this.Close();
         }
     }

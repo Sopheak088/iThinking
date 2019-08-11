@@ -34,6 +34,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnSupplier = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -69,6 +70,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnSupplier);
             this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.btnProduct);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,6 +83,18 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
+            // 
+            // btnSupplier
+            // 
+            this.btnSupplier.Image = global::ProjectTesting.Properties.Resources.icons8_Supplier_50px;
+            this.btnSupplier.Location = new System.Drawing.Point(346, 12);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(146, 96);
+            this.btnSupplier.TabIndex = 2;
+            this.btnSupplier.Text = "Supplier";
+            this.btnSupplier.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSupplier.UseVisualStyleBackColor = true;
+            this.btnSupplier.Click += new System.EventHandler(this.BtnSupplier_Click);
             // 
             // btnUser
             // 
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnSupplier;
     }
 }

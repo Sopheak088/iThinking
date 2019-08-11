@@ -115,19 +115,19 @@ CREATE TABLE SUPPLIER(
 								@ID UNIQUEIDENTIFIER,
 								@Name NVARCHAR(max),
 								@Phone VARCHAR(13),
-								@Descritp NVARCHAR(MAX),
+								@Descript NVARCHAR(MAX),
 								@Photo VARBINARY(MAX)								
 							  )
 AS 
 BEGIN
 	INSERT INTO SUPPLIER
-	VALUES(@ID,@Name,@phone,@Descritp,@Photo)
+	VALUES(@ID,@Name,@phone,@Descript,@Photo)
 END
 Go
 CREATE PROCEDURE UpdateSupplier(
 				@ID UNIQUEIDENTIFIER,
 				@Name NVARCHAR(MAX),
-				@Descritp NVARCHAR(MAX),
+				@Descript NVARCHAR(MAX),
 				@Phone VARCHAR(13),
 				@Photo VARBINARY(MAX)
 

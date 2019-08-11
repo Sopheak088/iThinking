@@ -63,9 +63,29 @@ namespace ProjectTesting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document {
+            get {
+                object obj = ResourceManager.GetObject("document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_move_by_trolley_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_move_by_trolley_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Supplier_50px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Supplier_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

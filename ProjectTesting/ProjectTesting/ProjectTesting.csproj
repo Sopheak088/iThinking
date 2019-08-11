@@ -50,6 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category\Dao\CategoryDao.cs" />
+    <Compile Include="Category\Entity\CustomerEntity.cs" />
+    <Compile Include="Category\View\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\View\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\View\FrmCategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\View\FrmCategoryList.Designer.cs">
+      <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Dao\CustomerDao.cs" />
     <Compile Include="Customer\Entity\CustomerEntity.cs" />
     <Compile Include="Customer\View\FrmCustomer.cs">
@@ -95,6 +109,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplier\Dao\SupplierDao.cs" />
+    <Compile Include="Supplier\Entity\SupplierEntity.cs" />
+    <Compile Include="Supplier\View\FrmListAllSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\View\FrmListAllSupplier.Designer.cs">
+      <DependentUpon>FrmListAllSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\View\FrmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier\View\FrmSupplier.Designer.cs">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\Dao\UserDao.cs" />
     <Compile Include="User\Entity\UserEntity.cs" />
     <Compile Include="User\View\FrmUserList.cs">
@@ -139,6 +167,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Supplier\View\FrmListAllSupplier.resx">
+      <DependentUpon>FrmListAllSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier\View\FrmSupplier.resx">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\View\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +198,8 @@
     <Content Include="Database\Structure.sql" />
     <Content Include="Database\Davin\Alter.sql" />
     <Content Include="Database\Samnang\Alter.sql" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\icons8_Supplier_50px.png" />
     <None Include="Resources\icons8_User_50px_1.png" />
     <None Include="Resources\icons8_move_by_trolley_50px.png" />
   </ItemGroup>
