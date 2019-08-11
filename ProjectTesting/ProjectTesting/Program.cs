@@ -1,7 +1,6 @@
 ﻿using ProjectTesting.Customer.View;
 using ProjectTesting.Manager;
 using ProjectTesting.Product.View;
-using ProjectTesting.Supplier.View;
 using ProjectTesting.User.View;
 using System;
 using System.Collections.Generic;

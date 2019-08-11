@@ -68,7 +68,7 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Connect.cs" />
-    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\Helpers.cs" />
     <Compile Include="Helper\StringCipher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

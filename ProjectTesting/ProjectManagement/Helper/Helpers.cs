@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace ProjectManagement.Helper
 {
-    public static class Helper
+    public static class Helpers
     {
         /// <summary>
         /// Convert from string to Currency
@@ -64,6 +65,23 @@ namespace ProjectManagement.Helper
                 photo = File.ReadAllBytes(stringValue);
             }
             return (photo);
+        }
+
+        public static bool CheckEmpty(System.Windows.Forms.ErrorProvider ep,
+            params Control[] ctr)
+        {
+            int n = ctr.GetUpperBound(0);
+            bool b = false;
+            for (int i = 0; i <= n; i++)
+            {
+                if (ctr[i].Text == "")
+                {
+                    ep.SetError(ctr[i], "Missing Value");// + ctr[i].Tag //You can enter tag all control
+                    // ctr[i].Name.Substring(3, ctr[i].Name.Length - 3));
+                    b = true;
+                }
+            }
+            return (b);
         }
     }
 }
