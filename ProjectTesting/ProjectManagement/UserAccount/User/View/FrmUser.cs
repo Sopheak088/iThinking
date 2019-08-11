@@ -34,8 +34,18 @@ namespace ProjectManagement.UserAccount.User.View
 
         private void BtnSaveNew_Click(object sender, EventArgs e)
         {
+            Save();
             string text = StringCipher.Encrypt(txtPassword.Text);
             MessageBox.Show(text);
+        }
+
+        private void Save()
+        {
+            if (Helpers.CheckEmpty(errorProvider1, txtFirstName, txtLastName, txtUseName,
+                txtPassword, txtPhone, cboPosition))
+            {
+                return;
+            }
         }
     }
 }

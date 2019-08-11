@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUser));
             this.label1 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
@@ -45,6 +46,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
             this.cboPosition = new Janus.Windows.EditControls.UIComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -195,6 +198,10 @@
             this.cboPosition.TabIndex = 16;
             this.cboPosition.VisualStyle = Janus.Windows.UI.VisualStyle.Office2010;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -226,6 +233,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUser_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +257,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chkActive;
         private Janus.Windows.EditControls.UIComboBox cboPosition;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
