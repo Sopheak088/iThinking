@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectManagement
+namespace ProjectTesting.Employee.View
 {
-    public partial class Form1 : Form
+    public partial class FrmEmployee : Form
     {
-        public Form1()
+        public FrmEmployee()
         {
             InitializeComponent();
         }
