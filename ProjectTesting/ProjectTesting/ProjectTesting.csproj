@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Janus.Windows.ButtonBar.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.CalendarCombo.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.Common.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
     <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
@@ -50,6 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Company\Dao\CompanyDao.cs" />
+    <Compile Include="Company\Entity\CompanyEntity.cs" />
+    <Compile Include="Company\View\FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\View\FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\View\FrmCompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\View\FrmCompanyList.Designer.cs">
+      <DependentUpon>FrmCompanyList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Dao\CustomerDao.cs" />
     <Compile Include="Customer\Entity\CustomerEntity.cs" />
     <Compile Include="Customer\View\FrmCustomer.cs">
@@ -95,6 +110,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staffs\Dao\StaffDao.cs" />
+    <Compile Include="Staffs\Entity\StaffEntity.cs" />
+    <Compile Include="Staffs\View\FrmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\View\FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\View\FrmStaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\View\FrmStaffList.Designer.cs">
+      <DependentUpon>FrmStaffList.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\Dao\UserDao.cs" />
     <Compile Include="User\Entity\UserEntity.cs" />
     <Compile Include="User\View\FrmUserList.cs">
@@ -110,6 +139,12 @@
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="User\View\Msg.cs" />
+    <EmbeddedResource Include="Company\View\FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\View\FrmCompanyList.resx">
+      <DependentUpon>FrmCompanyList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\View\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +174,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Staffs\View\FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\View\FrmStaffList.resx">
+      <DependentUpon>FrmStaffList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\View\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>

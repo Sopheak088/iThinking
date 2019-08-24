@@ -1,13 +1,7 @@
 ﻿using ProjectTesting.Product.View;
+using ProjectTesting.Staffs.View;
 using ProjectTesting.User.View;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectTesting
@@ -46,5 +40,22 @@ namespace ProjectTesting
             frmUserList.ShowDialog();
             this.Close();
         }
+
+        private void BtnStaff_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmStaffList u2 = new FrmStaffList();
+            u2.ShowDialog();
+            this.Close();
+        }
+
+        /*   private void BtnCompany_Click(object sender, EventArgs e)
+           {
+               this.Hide();
+               FrmCompanyList u3 = new FrmCompanyList();
+               u3.ShowDialog();
+               this.Close();
+           }*/
+
+        }
     }
-}
