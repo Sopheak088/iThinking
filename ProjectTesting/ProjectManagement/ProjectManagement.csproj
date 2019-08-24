@@ -33,10 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Janus.Data.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
     <Reference Include="Janus.Windows.Common.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.TimeLine.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.UI.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,11 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BaseObject\BaseClass.cs" />
+    <Compile Include="BaseObject\FilterEntity.cs" />
+    <Compile Include="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -61,8 +67,28 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Connect.cs" />
+    <Compile Include="Helper\Helpers.cs" />
+    <Compile Include="Helper\StringCipher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAccount\User\Dao\UserDao.cs" />
+    <Compile Include="UserAccount\User\Entity\UserEntity.cs" />
+    <Compile Include="UserAccount\User\View\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccount\User\View\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount\User\View\FrmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccount\User\View\FrmUserList.Designer.cs">
+      <DependentUpon>FrmUserList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,7 +101,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserAccount\User\View\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccount\User\View\FrmUserList.resx">
+      <DependentUpon>FrmUserList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,11 +123,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\" />
-    <Folder Include="UserAccount\Database\" />
-    <Folder Include="UserAccount\User\Dao\" />
-    <Folder Include="UserAccount\User\Entity\" />
-    <Folder Include="UserAccount\User\View\" />
+    <Folder Include="Manager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Sopheak\Procedure.sql" />
+    <Content Include="Database\Sopheak\Sturcture.sql" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\text_add.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\preview.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\add 16x16.png" />
+    <Content Include="UserAccount\Database\Procedure.sql" />
+    <Content Include="UserAccount\Database\Table.sql" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\find 24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
