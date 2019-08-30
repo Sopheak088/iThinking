@@ -1,5 +1,4 @@
-﻿using ProjectTesting.Helper;
-using ProjectTesting.Product.Dao;
+﻿using ProjectTesting.Product.Dao;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
