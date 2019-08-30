@@ -86,14 +86,7 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Connection.cs" />
-    <Compile Include="Helper\FormClose.cs" />
     <Compile Include="Helper\Helpers.cs" />
-    <Compile Include="Manager\FrmLogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager\FrmLogIn.Designer.cs">
-      <DependentUpon>FrmLogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product\Dao\ProductDao.cs" />
     <Compile Include="Product\Entity\ProductEntity.cs" />
     <Compile Include="Product\View\FrmProduct.cs">
@@ -110,6 +103,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Staffs\Dao\StaffDao.cs" />
     <Compile Include="Staffs\Entity\StaffEntity.cs" />
     <Compile Include="Staffs\View\FrmStaff.cs">
@@ -154,9 +152,6 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager\FrmLogIn.resx">
-      <DependentUpon>FrmLogIn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Product\View\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,14 +161,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Staffs\View\FrmStaff.resx">
       <DependentUpon>FrmStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,14 +189,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Manager\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Database\StoreProcedure.sql" />
     <Content Include="Database\Structure.sql" />
     <Content Include="Database\Davin\Alter.sql" />
     <Content Include="Database\Samnang\Alter.sql" />
+    <Content Include="Resources\icons8_move_by_trolley_50px.png" />
     <None Include="Resources\icons8_User_50px_1.png" />
-    <None Include="Resources\icons8_move_by_trolley_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,4 @@
 ﻿using ProjectTesting.Company.View;
-using ProjectTesting.Manager;
 using System;
 using System.Windows.Forms;
 

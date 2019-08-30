@@ -105,14 +105,7 @@ BEGIN
 END
 GO
 CREATE PROCEDURE SearchCompany(
-								@Id UNIQUEIDENTIFIEr,
-								@Name VARCHAR(50),
-								@Location VARCHAR(50),
-								@Email VARCHAR(50),
-								@Telephone VARCHAR(15),
-								@Fax VARCHAR(50),
-								@Logo VARBINARY(MAX),
-								@Branch INT
+								@name VARCHAR(50)
 )
 AS
 BEGIN
@@ -121,4 +114,5 @@ BEGIN
 		FROM COMPANY
 		WHERE 
 		Name
-		LIKE '[A-Z]%'
+		LIKE '%' + @name +'%'
+END
