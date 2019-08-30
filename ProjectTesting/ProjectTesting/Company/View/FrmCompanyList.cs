@@ -12,6 +12,9 @@ namespace ProjectTesting.Company.View
         public FrmCompanyList()
         {
             InitializeComponent();
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+                txtSearch.Text = "Search Name Here";
+            txtSearch.ForeColor = Color.Blue;
         }
 
         private void FrmCompanyList_Load(object sender, EventArgs e)
@@ -83,6 +86,37 @@ namespace ProjectTesting.Company.View
                     cm.MenuItems.Add(new MenuItem("&Edit", new System.EventHandler(this.Edit_Click)));
                 }
                 cm.Show(this, new Point(e.X, e.Y));
+            }
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtSearch.Text) && !txtSearch.Text.Equals("SearchNameHere"))
+            {
+                dgvCompany.DataSource = CompanyDao.SearchCompanyByName(txtSearch.Text);
+            }
+            else
+            {
+                FrmCompanyList_Load(sender, e);
+            }        
+        }
+
+        private void TxtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals("Search Name Here"))
+            {
+                txtSearch.Text = null;
+                txtSearch.ForeColor = Color.Gray;
+            }
+               
+        }
+
+        private void TxtSearch_Leave(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = "Search Name Here";
+                txtSearch.ForeColor = Color.Blue;
             }
         }
     }

@@ -104,21 +104,11 @@ BEGIN
 	SELECT * FROM COMPANY
 END
 GO
-CREATE PROCEDURE SearchCompany(
-								@Id UNIQUEIDENTIFIEr,
-								@Name VARCHAR(50),
-								@Location VARCHAR(50),
-								@Email VARCHAR(50),
-								@Telephone VARCHAR(15),
-								@Fax VARCHAR(50),
-								@Logo VARBINARY(MAX),
-								@Branch INT
-)
-AS
-BEGIN
-		SELECT 
-		Name 
-		FROM COMPANY
-		WHERE 
-		Name
-		LIKE '[A-Z]%'
+CREATE PROCEDURE SearchCompanyByName
+									@Name VARCHAR(50)
+									AS
+									SELECT * FROM COMPANY
+									WHERE
+									Name LIKE '%' + @Name + '%'
+								
+GO

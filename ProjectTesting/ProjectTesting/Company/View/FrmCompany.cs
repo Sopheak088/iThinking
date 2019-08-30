@@ -17,6 +17,7 @@ namespace ProjectTesting.Company.View
             InitializeComponent();
             if (id != null)
             {
+                //Upload Data from Database to all control of the Form for Editing
                 getId = Guid.Parse(id.ToString());
                 DataTable dt = CompanyDao.GetCompanyById(getId);
                 if (dt != null)
@@ -55,12 +56,12 @@ namespace ProjectTesting.Company.View
             if (getId != Guid.Empty)
             {
                 comEntity.Id = getId;
-               // CompanyDao.Update(comEntity);
+                CompanyDao.Update(comEntity);
             }
             else
             {
                 comEntity.Id = Guid.NewGuid();
-               // CompanyDao.Insert(comEntity);
+                CompanyDao.Insert(comEntity);
             }
         }
 
