@@ -84,28 +84,7 @@ namespace ProjectTesting.Company.Dao
             return dt;
         }
 
-        public static DataTable SearchCompanyByName(string search)
-        {
-            DataTable dt = new DataTable();
-            try
-            {
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                SqlCommand cmd = new SqlCommand("SearchCompanyByName", Connection.ToDatabase());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Name", search);
-                adapter.SelectCommand = cmd;
-                adapter.Fill(dt);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.ToString(), @"Could not find Stored Procedure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Connection.ToDatabase();
-            }
-            return dt;
-        }
+
 
         public static DataTable GetCompanyById(Guid Id)
         {

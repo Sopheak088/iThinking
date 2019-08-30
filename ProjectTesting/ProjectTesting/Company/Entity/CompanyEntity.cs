@@ -2,7 +2,7 @@
 
 namespace ProjectTesting.Company.Entity
 {
-    public class CompanyEntity
+    class CompanyEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
