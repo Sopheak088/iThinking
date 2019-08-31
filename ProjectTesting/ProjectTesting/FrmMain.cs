@@ -1,4 +1,5 @@
-﻿using ProjectTesting.Product.View;
+﻿using ProjectTesting.Customer.View;
+using ProjectTesting.Product.View;
 using ProjectTesting.Supplier.View;
 using ProjectTesting.User.View;
 using System;
@@ -52,6 +53,22 @@ namespace ProjectTesting
         {
             this.Hide();
             FrmListAllSupplier frm = new FrmListAllSupplier();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void BtnCategory_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void BtnCustomer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmCustomerList frm = new FrmCustomerList();
             frm.ShowDialog();
             this.Close();
         }

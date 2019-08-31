@@ -33,10 +33,12 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnCategory = new System.Windows.Forms.Button();
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +72,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCustomer);
+            this.panel2.Controls.Add(this.btnCategory);
             this.panel2.Controls.Add(this.btnSupplier);
             this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.btnProduct);
@@ -78,11 +82,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(566, 450);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
-            // timer1
+            // btnCategory
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
+            this.btnCategory.Image = global::ProjectTesting.Properties.Resources.icons8_Supplier_50px;
+            this.btnCategory.Location = new System.Drawing.Point(346, 125);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(146, 96);
+            this.btnCategory.TabIndex = 3;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.BtnCategory_Click);
             // 
             // btnSupplier
             // 
@@ -120,6 +132,23 @@
             this.btnProduct.UseVisualStyleBackColor = true;
             this.btnProduct.Click += new System.EventHandler(this.BtnProduct_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Image = global::ProjectTesting.Properties.Resources.icons8_Supplier_50px;
+            this.btnCustomer.Location = new System.Drawing.Point(346, 245);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(146, 96);
+            this.btnCustomer.TabIndex = 4;
+            this.btnCustomer.Text = "Customer";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.BtnCustomer_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -146,5 +175,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnCustomer;
     }
 }

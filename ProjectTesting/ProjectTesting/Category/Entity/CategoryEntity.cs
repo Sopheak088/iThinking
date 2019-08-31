@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjectTesting.Category.Entity
 {
-    class CustomerEntity
+    class CategoryEntity
     {
+        public Guid ID { get; set; }
+        public string Category { get; set; }
+        public string Des { get; set; }
     }
 }

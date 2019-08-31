@@ -36,6 +36,8 @@
             this.btnSaveNew = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSaveClose = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             this.txtName.Location = new System.Drawing.Point(143, 87);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(294, 38);
+            this.txtName.Size = new System.Drawing.Size(294, 28);
             this.txtName.TabIndex = 0;
             // 
             // label1
@@ -52,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 30);
+            this.label1.Size = new System.Drawing.Size(47, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
@@ -61,7 +63,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 30);
+            this.label2.Size = new System.Drawing.Size(48, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Phone";
             // 
@@ -70,7 +72,7 @@
             this.txtPhone.Location = new System.Drawing.Point(143, 145);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(294, 38);
+            this.txtPhone.Size = new System.Drawing.Size(294, 28);
             this.txtPhone.TabIndex = 2;
             // 
             // picCustomer
@@ -114,11 +116,30 @@
             this.btnSaveClose.UseVisualStyleBackColor = true;
             this.btnSaveClose.Click += new System.EventHandler(this.BtnSaveClose_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(143, 217);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(287, 27);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 21);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Province";
+            // 
             // FrmCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 438);
+            this.ClientSize = new System.Drawing.Size(756, 341);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnSaveClose);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSaveNew);
@@ -148,5 +169,7 @@
         private System.Windows.Forms.Button btnSaveNew;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSaveClose;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

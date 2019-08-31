@@ -1,6 +1,9 @@
-﻿using ProjectTesting.Helper;
+﻿using ProjectTesting.Customer.Dao;
+using ProjectTesting.Helper;
 using ProjectTesting.Product.Dao;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -13,6 +16,11 @@ namespace ProjectTesting.Product.View
         public FrmProductList()
         {
             InitializeComponent();
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = "Search Name Here";
+                txtSearch.ForeColor = Color.Gray;
+            }
         }
 
         private void FrmProductList_Load(object sender, EventArgs e)
@@ -27,7 +35,7 @@ namespace ProjectTesting.Product.View
             dgvProduct.Columns["MadeDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvProduct.Columns["ExpiredDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
-            //define image size stretch
+            // define image size stretch
             DataGridViewImageColumn img = new DataGridViewImageColumn();
             img = (DataGridViewImageColumn)dgvProduct.Columns["Photo"];
             img.ImageLayout = DataGridViewImageCellLayout.Stretch;
@@ -84,6 +92,36 @@ namespace ProjectTesting.Product.View
 
         private void DgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtSearch.Text) && !txtSearch.Text.Equals("Search Name Here"))
+            {
+                dgvProduct.DataSource = CustomerDao.ListAllCustomerByName(txtSearch.Text);
+            }
+            else
+            {
+                FrmProductList_Load(sender, e);
+            }
+        }
+
+        private void TxtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals("Search Name Here"))
+            {
+                txtSearch.Text = null;
+                txtSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals("Search Name Here"))
+            {
+                txtSearch.Text = null;
+                txtSearch.ForeColor = Color.Black;
+            }
         }
     }
 }

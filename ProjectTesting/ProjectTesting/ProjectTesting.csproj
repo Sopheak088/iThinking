@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category\Dao\CategoryDao.cs" />
-    <Compile Include="Category\Entity\CustomerEntity.cs" />
+    <Compile Include="Category\Entity\CategoryEntity.cs" />
     <Compile Include="Category\View\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +138,12 @@
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="User\View\Msg.cs" />
+    <EmbeddedResource Include="Category\View\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\View\FrmCategoryList.resx">
+      <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\View\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +200,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Database\Pheak\Alter.sql" />
+    <Content Include="Database\Pheak\StoreProcedure.sql" />
     <Content Include="Database\StoreProcedure.sql" />
     <Content Include="Database\Structure.sql" />
     <Content Include="Database\Davin\Alter.sql" />

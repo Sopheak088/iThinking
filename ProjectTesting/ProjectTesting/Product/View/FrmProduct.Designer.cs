@@ -43,6 +43,8 @@
             this.btnSaveNew = new System.Windows.Forms.Button();
             this.btnSaveClose = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +152,7 @@
             // 
             // btnSaveNew
             // 
-            this.btnSaveNew.Location = new System.Drawing.Point(183, 246);
+            this.btnSaveNew.Location = new System.Drawing.Point(115, 328);
             this.btnSaveNew.Name = "btnSaveNew";
             this.btnSaveNew.Size = new System.Drawing.Size(141, 31);
             this.btnSaveNew.TabIndex = 10;
@@ -160,7 +162,7 @@
             // 
             // btnSaveClose
             // 
-            this.btnSaveClose.Location = new System.Drawing.Point(338, 246);
+            this.btnSaveClose.Location = new System.Drawing.Point(270, 328);
             this.btnSaveClose.Name = "btnSaveClose";
             this.btnSaveClose.Size = new System.Drawing.Size(141, 31);
             this.btnSaveClose.TabIndex = 11;
@@ -170,7 +172,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(501, 246);
+            this.btnClose.Location = new System.Drawing.Point(433, 328);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(141, 31);
             this.btnClose.TabIndex = 12;
@@ -178,12 +180,32 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // cboCategory
+            // 
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.Location = new System.Drawing.Point(152, 270);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(284, 25);
+            this.cboCategory.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(454, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 31);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Check";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // FrmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 297);
+            this.ClientSize = new System.Drawing.Size(667, 381);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSaveClose);
             this.Controls.Add(this.btnSaveNew);
@@ -226,5 +248,7 @@
         private System.Windows.Forms.Button btnSaveNew;
         private System.Windows.Forms.Button btnSaveClose;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ComboBox cboCategory;
+        private System.Windows.Forms.Button button1;
     }
 }
