@@ -85,14 +85,7 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Connection.cs" />
-    <Compile Include="Helper\FormClose.cs" />
     <Compile Include="Helper\Helpers.cs" />
-    <Compile Include="Manager\FrmLogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manager\FrmLogIn.Designer.cs">
-      <DependentUpon>FrmLogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product\Dao\ProductDao.cs" />
     <Compile Include="Product\Entity\ProductEntity.cs" />
     <Compile Include="Product\View\FrmProduct.cs">
@@ -153,9 +146,6 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager\FrmLogIn.resx">
-      <DependentUpon>FrmLogIn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Product\View\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,7 +188,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Manager\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Database\Pheak\Alter.sql" />
     <Content Include="Database\Pheak\StoreProcedure.sql" />
