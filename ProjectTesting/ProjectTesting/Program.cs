@@ -1,11 +1,5 @@
-﻿using ProjectTesting.Customer.View;
-using ProjectTesting.Manager;
-using ProjectTesting.Product.View;
-using ProjectTesting.User.View;
+﻿using ProjectTesting.Company.View;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectTesting
@@ -20,7 +14,7 @@ namespace ProjectTesting
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogIn());
+            Application.Run(new FrmCompany());
         }
     }
 }
