@@ -104,15 +104,15 @@ BEGIN
 	SELECT * FROM COMPANY
 END
 GO
-CREATE PROCEDURE SearchCompany(
-								@name VARCHAR(50)
-)
-AS
-BEGIN
-		SELECT 
-		Name 
-		FROM COMPANY
-		WHERE 
-		Name
-		LIKE '%' + @name +'%'
-END
+CREATE PROCEDURE SearchCompanyByName(
+								@Name VARCHAR(50)
+									)
+								AS
+								BEGIN
+										SELECT 
+										Name 
+										FROM COMPANY
+										WHERE 
+										Name
+										LIKE '%' + @Name +'%'
+								END
