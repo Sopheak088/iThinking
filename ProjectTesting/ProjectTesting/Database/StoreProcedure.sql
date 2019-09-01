@@ -48,7 +48,6 @@ CREATE PROCEDURE InsertCustomer(
 				@Phone VARCHAR(13),
 				@Photo VARBINARY(MAX)
 
-
 )
 AS
 BEGIN
