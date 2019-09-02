@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DC119C03-9C97-4C58-94AA-BAD1354C1D7A}</ProjectGuid>
+    <ProjectGuid>{2CB439B1-322B-47DE-A14A-C1E73DA1607F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProjectManagement</RootNamespace>
-    <AssemblyName>ProjectManagement</AssemblyName>
+    <RootNamespace>WindowFormTesting</RootNamespace>
+    <AssemblyName>WindowFormTesting</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,14 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Janus.Data.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
-    <Reference Include="Janus.Windows.Common.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
-    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
-    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
-    <Reference Include="Janus.Windows.TimeLine.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
-    <Reference Include="Janus.Windows.UI.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,47 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseObject\BaseClass.cs" />
-    <Compile Include="BaseObject\FilterEntity.cs" />
-    <Compile Include="FrmLogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLogIn.Designer.cs">
-      <DependentUpon>FrmLogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\Connect.cs" />
+    <Compile Include="Helper\Connection.cs" />
     <Compile Include="Helper\Helpers.cs" />
-    <Compile Include="Helper\StringCipher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAccount\Database\UserTable.cs" />
-    <Compile Include="UserAccount\User\Dao\UserDao.cs" />
-    <Compile Include="UserAccount\User\Entity\UserEntity.cs" />
-    <Compile Include="UserAccount\User\View\FrmUser.cs">
+    <Compile Include="User\Dao\UserDao.cs" />
+    <Compile Include="User\Entity\UserEntity.cs" />
+    <Compile Include="User\View\FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUser.Designer.cs">
+    <Compile Include="User\View\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUserList.cs">
+    <Compile Include="User\View\FrmUserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUserList.Designer.cs">
+    <Compile Include="User\View\FrmUserList.Designer.cs">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmLogIn.resx">
-      <DependentUpon>FrmLogIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,14 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserAccount\User\View\FrmUser.resx">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount\User\View\FrmUserList.resx">
-      <DependentUpon>FrmUserList.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,23 +92,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Manager\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database\Sopheak\Procedure.sql" />
-    <Content Include="Database\Sopheak\Sturcture.sql" />
-    <None Include="Resources\close.png" />
-    <None Include="Resources\save.png" />
-    <None Include="Resources\text_add.png" />
-    <None Include="Resources\refresh.png" />
-    <None Include="Resources\preview.png" />
-    <None Include="Resources\edit.png" />
-    <None Include="Resources\add 16x16.png" />
-    <Content Include="UserAccount\Database\Procedure.sql" />
-    <Content Include="UserAccount\Database\Table.sql" />
-    <None Include="Resources\search.png" />
-    <None Include="Resources\find 24x24.png" />
+    <Content Include="Database\Davin\Davin Alter.sql" />
+    <Content Include="Database\Haita\Haita Alter.sql" />
+    <Content Include="Database\Lyta\Lyta Alter.sql" />
+    <Content Include="Database\All\StoreProcedure.sql" />
+    <Content Include="Database\All\Structure.sql" />
+    <Content Include="Database\Rathanak\Rathanak Alter.sql" />
+    <Content Include="Database\Samnang\Samnang Alter.sql" />
+    <Content Include="Database\Sreyne\Sreyne Alter.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
