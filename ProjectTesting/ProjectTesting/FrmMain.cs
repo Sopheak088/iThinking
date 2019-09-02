@@ -1,7 +1,15 @@
-﻿using ProjectTesting.Product.View;
-using ProjectTesting.Staffs.View;
+﻿using ProjectTesting.Customer.View;
+using ProjectTesting.Product.View;
+using ProjectTesting.Supplier.View;
 using ProjectTesting.User.View;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectTesting
@@ -41,21 +49,28 @@ namespace ProjectTesting
             this.Close();
         }
 
-        private void BtnStaff_Click(object sender, EventArgs e)
+        private void BtnSupplier_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmStaffList u2 = new FrmStaffList();
-            u2.ShowDialog();
+            FrmListAllSupplier frm = new FrmListAllSupplier();
+            frm.ShowDialog();
             this.Close();
         }
 
-        /*   private void BtnCompany_Click(object sender, EventArgs e)
-           {
-               this.Hide();
-               FrmCompanyList u3 = new FrmCompanyList();
-               u3.ShowDialog();
-               this.Close();
-           }*/
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
 
+        private void BtnCategory_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void BtnCustomer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmCustomerList frm = new FrmCustomerList();
+            frm.ShowDialog();
+            this.Close();
         }
     }
+}

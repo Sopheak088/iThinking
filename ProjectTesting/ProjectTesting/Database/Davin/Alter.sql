@@ -19,7 +19,7 @@ CREATE PROCEDURE InsertProduct(
 							  )
 AS 
 BEGIN
-	INSERT INTO PRODUCT 
+	INSERT INTO PRODUCT
 	VALUES(@Id,@Name,@Price,@MadeDate,@ExpiredDate,@Photo,@Active)
 END
 GO
@@ -115,19 +115,19 @@ CREATE TABLE SUPPLIER(
 								@ID UNIQUEIDENTIFIER,
 								@Name NVARCHAR(max),
 								@Phone VARCHAR(13),
-								@Descritp NVARCHAR(MAX),
+								@Descript NVARCHAR(MAX),
 								@Photo VARBINARY(MAX)								
 							  )
 AS 
 BEGIN
 	INSERT INTO SUPPLIER
-	VALUES(@ID,@Name,@phone,@Descritp,@Photo)
+	VALUES(@ID,@Name,@phone,@Descript,@Photo)
 END
 Go
 CREATE PROCEDURE UpdateSupplier(
 				@ID UNIQUEIDENTIFIER,
 				@Name NVARCHAR(MAX),
-				@Descritp NVARCHAR(MAX),
+				@Descript NVARCHAR(MAX),
 				@Phone VARCHAR(13),
 				@Photo VARBINARY(MAX)
 
@@ -191,11 +191,82 @@ SET
 
 END
 Go
-CREATE PROCEDURE ListAllUser
+--CREATE PROCEDURE ListAllUser
+--AS
+--BEGIN
+--SELECT * FROM [USER]
+--END
+--GO
+--CREATE PROCEDURE UserLogin(
+--						@uid VARCHAR(MAX),
+--						@pwd VARCHAR(MAX)
+--						)
+--AS
+--BEGIN
+--SELECT * FROM [USER]
+--WHERE LOWER(UserName)=LOWER(@uid)
+--AND UserPassword=@pwd
+--END
+GO
+create procedure UserLogin(@uid varchar(max),@pwd varchar(max))
+as
+begin
+	select * from [USER]
+	where [UserName] = @uid and [UserPassword] =@pwd
+end
+GO
+
+CREATE TABLE CATEGORY(
+	ID UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+	Category NVARCHAR(MAX) COLLATE Khmer_100_BIN,
+	[Des]   NVARCHAR(MAX)
+	
+)
+GO
+CREATE PROCEDURE InsertCategory(
+				@ID UNIQUEIDENTIFIER,
+				@Category NVARCHAR(MAX),
+				@Des NVARCHAR(MAX)
+				
+
+
+)
 AS
 BEGIN
-SELECT * FROM [USER]
+INSERT INTO CATEGORY
+VALUES (@ID,@Category,@Des)
+
 END
+Go
+CREATE PROCEDURE UpdateCategory(
+				@ID UNIQUEIDENTIFIER,
+				@Category NVARCHAR(MAX),
+				@Des NVARCHAR(MAX)			
 
 
+)
+AS
+BEGIN
+UPDATE CATEGORY
+SET
+	Category=@Category,
+	[Des]=@Des
 	
+	WHERE ID=@ID
+
+END
+Go
+CREATE PROCEDURE ListAllCategory
+AS
+BEGIN
+SELECT * FROM CATEGORY
+END
+Go
+CREATE PROCEDURE SearchCustomerByName @name nvarchar(30)
+AS
+SELECT * FROM [CUSTOMER] WHERE Lower(Name) LIKE '%'+ LOWER(@name) +'%'
+GO
+CREATE PROCEDURE SearchProductByName @name nvarchar(30)
+AS
+SELECT * FROM PRODUCT
+ WHERE Lower(Name) LIKE '%'+ LOWER(@name) +'%'

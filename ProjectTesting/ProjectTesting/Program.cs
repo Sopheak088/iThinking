@@ -1,5 +1,4 @@
-﻿using ProjectTesting.Company.View;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ProjectTesting
@@ -14,7 +13,7 @@ namespace ProjectTesting
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCompany());
+            Application.Run(new FrmMain());
         }
     }
 }

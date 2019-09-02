@@ -3,6 +3,7 @@ using ProjectTesting.Product.Dao;
 using ProjectTesting.Product.Entity;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -117,9 +118,25 @@ namespace ProjectTesting.Product.View
 
         private void FrmProduct_Load(object sender, EventArgs e)
         {
-            //cboPro.DataSource = ProductDao.GetProductToComboBox();
-            //cboPro.ValueMember = "ID";
-            //cboPro.DisplayMember = "Name";
+            try
+            {
+                string query = "SELECT ID, Category FROM CATEGORY";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, Connection.ToDatabase());
+                DataSet ds = new DataSet();
+                DataTable dataTable = new DataTable();
+                da.Fill(dataTable);
+                da.Dispose();
+                cboCategory.DisplayMember = "Category";
+                cboCategory.ValueMember = "ID";
+                //  cboCategory.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                // write exception info to log or anything else
+                MessageBox.Show("Error occured!");
+            }
+            Connection.ToDatabase().Close();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -128,6 +145,14 @@ namespace ProjectTesting.Product.View
             FrmProductList frm = new FrmProductList();
             frm.ShowDialog();
             this.Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            string id = cboCategory.SelectedValue.ToString();
+            string dis = cboCategory.Text;
+
+            MessageBox.Show("ID" + id + " ****Dis " + dis);
         }
     }
 }

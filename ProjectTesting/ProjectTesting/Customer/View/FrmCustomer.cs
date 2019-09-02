@@ -93,5 +93,9 @@ namespace ProjectTesting.Customer.View
             frm.ShowDialog();
             //this.Close();
         }
+
+        private void FrmCustomer_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

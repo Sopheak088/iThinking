@@ -18,6 +18,11 @@ namespace ProjectTesting.Customer.View
         public FrmCustomerList()
         {
             InitializeComponent();
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = "Search Name Here";
+                txtSearch.ForeColor = Color.Gray;
+            }
         }
 
         private void FrmCustomerList_Load(object sender, EventArgs e)
@@ -79,6 +84,36 @@ namespace ProjectTesting.Customer.View
 
                 DataGridViewRow row = dgvCustomerList.Rows[i];
                 getId = Guid.Parse(row.Cells[0].Value.ToString());
+            }
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtSearch.Text) && !txtSearch.Text.Equals("Search Name Here"))
+            {
+                dgvCustomerList.DataSource = CustomerDao.ListAllCustomerByName(txtSearch.Text);
+            }
+            else
+            {
+                FrmCustomerList_Load(sender, e);
+            }
+        }
+
+        private void TxtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals("Search Name Here"))
+            {
+                txtSearch.Text = null;
+                txtSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = "Search Name Here";
+                txtSearch.ForeColor = Color.Gray;
             }
         }
     }
