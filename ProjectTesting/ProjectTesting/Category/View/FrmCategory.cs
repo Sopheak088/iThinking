@@ -2,14 +2,8 @@
 using ProjectTesting.Category.Entity;
 using ProjectTesting.Helper;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectTesting.Category.View
@@ -60,29 +54,6 @@ namespace ProjectTesting.Category.View
             Save();
             getID = Guid.Empty;
             txtCategory.Text = txtDes.Text = null;
-        }
-
-        public static DataTable ListAllProductByName(string search)
-        {
-            DataTable dt = new DataTable();
-            try
-            {
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                SqlCommand cmd = new SqlCommand("SearchCustomerByName", Connection.ToDatabase());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@name", search);
-                adapter.SelectCommand = cmd;
-                adapter.Fill(dt);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.ToString(), @"Could not find store procedure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Connection.ToDatabase();
-            }
-            return dt;
         }
 
         private void BtnSaveClose_Click(object sender, EventArgs e)
