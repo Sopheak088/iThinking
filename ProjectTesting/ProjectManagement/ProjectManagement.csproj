@@ -169,8 +169,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Database\Sopheak\Procedure.sql" />
-    <Content Include="Database\Sopheak\Sturcture.sql" />
+    <Content Include="Database\All\Procedure.sql" />
+    <Content Include="Database\All\Sturcture.sql" />
     <None Include="Resources\close.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\text_add.png" />
@@ -372,7 +372,13 @@
     <Content Include="Resources\question.png" />
     <Content Include="Resources\upgrade_card.png" />
     <Content Include="Resources\upset128.png" />
+    <Content Include="Database\Davin\Davin Alter.sql" />
+    <Content Include="Database\Haita\Haita Alter.sql" />
+    <Content Include="Database\Lyta\Lyta Alter.sql" />
     <Content Include="UserManagement\Database\Procedure.sql" />
+    <Content Include="Database\Rathanak\Rathanak Alter.sql" />
+    <Content Include="Database\Samnang\Samnang Alter.sql" />
+    <Content Include="Database\Sreyne\Sreyne Alter.sql" />
     <Content Include="UserManagement\Database\Table.sql" />
     <None Include="Resources\search.png" />
     <None Include="Resources\find 24x24.png" />
