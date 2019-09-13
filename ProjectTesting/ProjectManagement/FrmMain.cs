@@ -44,21 +44,25 @@ namespace ProjectManagement
             }
         }
 
-        private void BtnCompany_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
-        {
-            //panelList.Controls.Clear();
-            FrmCompanyList frm = new FrmCompanyList { TopLevel = false, AutoScroll = true };
-            panelList.Controls.Add(frm);
-            //panelList.Dock = DockStyle.Top;//Fill;
-            panelList.Visible = true;
-            frm.Show();
-        }
-
         private void FrmMain_Load(object sender, EventArgs e)
         {
             COMPANY.Load_Company();
             USER.Load_User();
             MANAGE_ROLE.LoadRole();
+        }
+
+        private void CmdCompanyList_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmCompanyList frm = new FrmCompanyList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void CmdAddCompany_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmCompany frmCompany = new FrmCompany();
+            frmCompany.ShowDialog();
         }
     }
 }
