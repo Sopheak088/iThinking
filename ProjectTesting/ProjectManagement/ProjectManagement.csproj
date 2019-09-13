@@ -55,6 +55,20 @@
   <ItemGroup>
     <Compile Include="BaseObject\BaseClass.cs" />
     <Compile Include="BaseObject\FilterEntity.cs" />
+    <Compile Include="Company\Dao\CompanyDao.cs" />
+    <Compile Include="Company\Entity\CompanyEntity.cs" />
+    <Compile Include="Company\View\FrmCompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\View\FrmCompanyList.Designer.cs">
+      <DependentUpon>FrmCompanyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\View\FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\View\FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,23 +84,41 @@
     <Compile Include="Helper\Connect.cs" />
     <Compile Include="Helper\Helpers.cs" />
     <Compile Include="Helper\StringCipher.cs" />
+    <Compile Include="Manager\COMPANY.cs" />
+    <Compile Include="Manager\CONFIG.cs" />
+    <Compile Include="Manager\MANAGE_ROLE.cs" />
+    <Compile Include="Manager\USER.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAccount\Database\UserTable.cs" />
-    <Compile Include="UserAccount\User\Dao\UserDao.cs" />
-    <Compile Include="UserAccount\User\Entity\UserEntity.cs" />
-    <Compile Include="UserAccount\User\View\FrmUser.cs">
+    <Compile Include="UserManagement\ClassDao\SelectPicture.cs" />
+    <Compile Include="UserManagement\ClassDao\SelectRole.cs" />
+    <Compile Include="UserManagement\Control\MyPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Control\MyPicture.Designer.cs">
+      <DependentUpon>MyPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Database\UserTable.cs" />
+    <Compile Include="UserManagement\User\Dao\UserDao.cs" />
+    <Compile Include="UserManagement\User\Entity\UserEntity.cs" />
+    <Compile Include="UserManagement\User\View\FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUser.Designer.cs">
+    <Compile Include="UserManagement\User\View\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUserList.cs">
+    <Compile Include="UserManagement\User\View\FrmUserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUserList.Designer.cs">
+    <Compile Include="UserManagement\User\View\FrmUserList.Designer.cs">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Company\View\FrmCompanyList.resx">
+      <DependentUpon>FrmCompanyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\View\FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,10 +136,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserAccount\User\View\FrmUser.resx">
+    <EmbeddedResource Include="UserManagement\Control\MyPicture.resx">
+      <DependentUpon>MyPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\User\View\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount\User\View\FrmUserList.resx">
+    <EmbeddedResource Include="UserManagement\User\View\FrmUserList.resx">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -123,9 +158,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Manager\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Sopheak\Procedure.sql" />
     <Content Include="Database\Sopheak\Sturcture.sql" />
@@ -136,8 +169,9 @@
     <None Include="Resources\preview.png" />
     <None Include="Resources\edit.png" />
     <None Include="Resources\add 16x16.png" />
-    <Content Include="UserAccount\Database\Procedure.sql" />
-    <Content Include="UserAccount\Database\Table.sql" />
+    <Content Include="Resources\question.png" />
+    <Content Include="UserManagement\Database\Procedure.sql" />
+    <Content Include="UserManagement\Database\Table.sql" />
     <None Include="Resources\search.png" />
     <None Include="Resources\find 24x24.png" />
   </ItemGroup>

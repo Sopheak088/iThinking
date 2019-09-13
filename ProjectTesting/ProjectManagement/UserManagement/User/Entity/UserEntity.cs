@@ -11,6 +11,7 @@ namespace ProjectManagement.UserAccount.User.Entity
     public class UserEntity : BaseClass
     {
         public Guid Id { get; set; }
+
         public string FirstName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }

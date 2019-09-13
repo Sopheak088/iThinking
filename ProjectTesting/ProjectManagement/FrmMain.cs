@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjectManagement.Company.View;
+using ProjectManagement.Manager;
 using ProjectManagement.UserAccount.User.View;
 
 namespace ProjectManagement
@@ -40,6 +42,23 @@ namespace ProjectManagement
             {
                 e.Cancel = true;
             }
+        }
+
+        private void BtnCompany_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            //panelList.Controls.Clear();
+            FrmCompanyList frm = new FrmCompanyList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            //panelList.Dock = DockStyle.Top;//Fill;
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            COMPANY.Load_Company();
+            USER.Load_User();
+            MANAGE_ROLE.LoadRole();
         }
     }
 }
