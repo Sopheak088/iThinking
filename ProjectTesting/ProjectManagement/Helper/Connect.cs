@@ -30,5 +30,13 @@ namespace ProjectManagement.Helper
             }
             return con;
         }
+
+        public static void Close()
+        {
+            if (ToDatabase().State != ConnectionState.Closed)
+            {
+                ToDatabase().Close();
+            }
+        }
     }
 }

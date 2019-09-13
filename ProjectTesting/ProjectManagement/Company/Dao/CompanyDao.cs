@@ -45,10 +45,7 @@ namespace ProjectManagement.Company.Dao
             }
             finally
             {
-                if (Connect.ToDatabase().State != ConnectionState.Closed)
-                {
-                    Connect.ToDatabase().Close();
-                }
+                Connect.Close();
             }
             return dataTable;
         }
@@ -83,10 +80,7 @@ namespace ProjectManagement.Company.Dao
             }
             finally
             {
-                if (Connect.ToDatabase().State != ConnectionState.Closed)
-                {
-                    Connect.ToDatabase().Close();
-                }
+                Connect.Close();
             }
             return companyEntity;
         }
@@ -111,10 +105,7 @@ namespace ProjectManagement.Company.Dao
             }
             finally
             {
-                if (Connect.ToDatabase().State != ConnectionState.Closed)
-                {
-                    Connect.ToDatabase().Close();
-                }
+                Connect.Close();
             }
             return isExist;
         }
@@ -143,10 +134,7 @@ namespace ProjectManagement.Company.Dao
             }
             finally
             {
-                if (Connect.ToDatabase().State != ConnectionState.Closed)
-                {
-                    Connect.ToDatabase().Close();
-                }
+                Connect.Close();
             }
         }
 
@@ -174,10 +162,7 @@ namespace ProjectManagement.Company.Dao
             }
             finally
             {
-                if (Connect.ToDatabase().State != ConnectionState.Closed)
-                {
-                    Connect.ToDatabase().Close();
-                }
+                Connect.Close();
             }
         }
     }
