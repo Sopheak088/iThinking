@@ -62,6 +62,46 @@ namespace ProjectManagement.Manager
         public static bool ALLOW_EDIT_USER { get; set; }
         public static bool ALLOW_VIEW_USER { get; set; }
 
+        //Branch
+        public static bool ALLOW_ADD_BRANCH { get; set; }
+
+        public static bool ALLOW_EDIT_BRANCH { get; set; }
+        public static bool ALLOW_VIEW_BRANCH { get; set; }
+
+        //Product Menu
+        public static bool ALLOW_ADD_PRODUCT_MENU { get; set; }
+
+        public static bool ALLOW_EDIT_PRODUCT_MENU { get; set; }
+        public static bool ALLOW_VIEW_PRODUCT_MENU { get; set; }
+
+        //Transfer
+        public static bool ALLOW_ADD_TRANSFER_PRODUCT { get; set; }
+
+        public static bool ALLOW_EDIT_TRANSFER_PRODUCT { get; set; }
+        public static bool ALLOW_VIEW_TRANSFER_PRODUCT { get; set; }
+
+        //Product Size
+        public static bool ALLOW_ADD_PRODUCT_SIZE { get; set; }
+
+        public static bool ALLOW_EDIT_PRODUCT_SIZE { get; set; }
+
+        public static bool ALLOW_VIEW_PRODUCT_SIZE { get; set; }
+
+        //Product Type
+        public static bool ALLOW_ADD_PRODUCT_TYPE { get; set; }
+
+        public static bool ALLOW_EDIT_PRODUCT_TYPE { get; set; }
+        public static bool ALLOW_VIEW_PRODUCT_TYPE { get; set; }
+
+        //Invoice
+        public static bool ALLOW_ADD_INVOICE { get; set; }
+
+        public static bool ALLOW_EDIT_INVOICE { get; set; }
+        public static bool ALLOW_VIEW_INVOICE { get; set; }
+
+        //Sell
+        public static bool ALLOW_SELL { get; set; }
+
         public static void LoadRole()
         {
             //Company
@@ -100,6 +140,32 @@ namespace ProjectManagement.Manager
             ALLOW_ADD_USER = true;
             ALLOW_EDIT_USER = true;
             ALLOW_VIEW_USER = true;
+            //Branch
+            ALLOW_ADD_BRANCH = true;
+            ALLOW_EDIT_BRANCH = true;
+            ALLOW_VIEW_BRANCH = true;
+            //Product Menu
+            ALLOW_ADD_PRODUCT_MENU = true;
+            ALLOW_EDIT_PRODUCT_MENU = true;
+            ALLOW_VIEW_PRODUCT_MENU = true;
+            //Transfer
+            ALLOW_ADD_TRANSFER_PRODUCT = true;
+            ALLOW_EDIT_TRANSFER_PRODUCT = true;
+            ALLOW_VIEW_TRANSFER_PRODUCT = true;
+            //Product Size
+            ALLOW_ADD_PRODUCT_SIZE = true;
+            ALLOW_EDIT_PRODUCT_SIZE = true;
+            ALLOW_VIEW_PRODUCT_SIZE = true;
+            //Product Type
+            ALLOW_ADD_PRODUCT_TYPE = true;
+            ALLOW_EDIT_PRODUCT_TYPE = true;
+            ALLOW_VIEW_PRODUCT_TYPE = true;
+            //Invoice
+            ALLOW_ADD_INVOICE = true;
+            ALLOW_EDIT_INVOICE = true;
+            ALLOW_VIEW_INVOICE = true;
+            //Sell
+            ALLOW_SELL = true;
         }
     }
 }
