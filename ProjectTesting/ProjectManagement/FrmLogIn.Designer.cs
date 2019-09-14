@@ -39,6 +39,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.cboCompany = new Janus.Windows.EditControls.UIComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -61,7 +63,7 @@
             // 
             this.btnExit.Font = new System.Drawing.Font("Hanuman", 9F);
             this.btnExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExit.Location = new System.Drawing.Point(233, 129);
+            this.btnExit.Location = new System.Drawing.Point(236, 161);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(52, 23);
@@ -76,7 +78,7 @@
             this.labelUserName.BackColor = System.Drawing.Color.Transparent;
             this.labelUserName.Font = new System.Drawing.Font("Hanuman", 9F);
             this.labelUserName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelUserName.Location = new System.Drawing.Point(50, 66);
+            this.labelUserName.Location = new System.Drawing.Point(50, 67);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(66, 17);
             this.labelUserName.TabIndex = 6;
@@ -88,7 +90,7 @@
             this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("Hanuman", 9F);
             this.labelPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelPassword.Location = new System.Drawing.Point(50, 98);
+            this.labelPassword.Location = new System.Drawing.Point(50, 99);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(62, 17);
             this.labelPassword.TabIndex = 7;
@@ -103,23 +105,23 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(338, 40);
+            this.label3.Size = new System.Drawing.Size(326, 40);
             this.label3.TabIndex = 8;
             this.label3.Text = "Sale Inventory";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 62);
+            this.textBox2.Location = new System.Drawing.Point(116, 64);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 26);
+            this.textBox2.Size = new System.Drawing.Size(173, 26);
             this.textBox2.TabIndex = 11;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 94);
+            this.textBox3.Location = new System.Drawing.Point(116, 96);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 26);
+            this.textBox3.Size = new System.Drawing.Size(173, 26);
             this.textBox3.TabIndex = 12;
             // 
             // label2
@@ -142,7 +144,7 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLogin.Location = new System.Drawing.Point(134, 129);
+            this.btnLogin.Location = new System.Drawing.Point(137, 161);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -152,13 +154,36 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // cboCompany
+            // 
+            this.cboCompany.ComboStyle = Janus.Windows.EditControls.ComboStyle.DropDownList;
+            this.cboCompany.Location = new System.Drawing.Point(117, 128);
+            this.cboCompany.Name = "cboCompany";
+            this.cboCompany.Size = new System.Drawing.Size(172, 26);
+            this.cboCompany.TabIndex = 14;
+            this.cboCompany.VisualStyle = Janus.Windows.UI.VisualStyle.Office2010;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Hanuman", 9F);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(51, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Company";
+            // 
             // FrmLogIn
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 164);
+            this.ClientSize = new System.Drawing.Size(326, 191);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cboCompany);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -172,7 +197,7 @@
             this.Font = new System.Drawing.Font("Hanuman", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogIn";
@@ -194,5 +219,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
+        private Janus.Windows.EditControls.UIComboBox cboCompany;
+        private System.Windows.Forms.Label label4;
     }
 }

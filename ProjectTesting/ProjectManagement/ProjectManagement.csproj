@@ -55,6 +55,20 @@
   <ItemGroup>
     <Compile Include="BaseObject\BaseClass.cs" />
     <Compile Include="BaseObject\FilterEntity.cs" />
+    <Compile Include="Company\Dao\CompanyDao.cs" />
+    <Compile Include="Company\Entity\CompanyEntity.cs" />
+    <Compile Include="Company\View\FrmCompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\View\FrmCompanyList.Designer.cs">
+      <DependentUpon>FrmCompanyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\View\FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\View\FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,23 +84,47 @@
     <Compile Include="Helper\Connect.cs" />
     <Compile Include="Helper\Helpers.cs" />
     <Compile Include="Helper\StringCipher.cs" />
+    <Compile Include="Manager\COMPANY.cs" />
+    <Compile Include="Manager\CONFIG.cs" />
+    <Compile Include="Manager\MANAGE_ROLE.cs" />
+    <Compile Include="Manager\USER.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserAccount\Database\UserTable.cs" />
-    <Compile Include="UserAccount\User\Dao\UserDao.cs" />
-    <Compile Include="UserAccount\User\Entity\UserEntity.cs" />
-    <Compile Include="UserAccount\User\View\FrmUser.cs">
+    <Compile Include="UserManagement\ClassDao\SelectPicture.cs" />
+    <Compile Include="UserManagement\ClassDao\SelectRole.cs" />
+    <Compile Include="UserManagement\Control\MoneyTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Control\MoneyTextBox.Designer.cs">
+      <DependentUpon>MoneyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Control\MyPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Control\MyPicture.Designer.cs">
+      <DependentUpon>MyPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Database\UserTable.cs" />
+    <Compile Include="UserManagement\User\Dao\UserDao.cs" />
+    <Compile Include="UserManagement\User\Entity\UserEntity.cs" />
+    <Compile Include="UserManagement\User\View\FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUser.Designer.cs">
+    <Compile Include="UserManagement\User\View\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUserList.cs">
+    <Compile Include="UserManagement\User\View\FrmUserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAccount\User\View\FrmUserList.Designer.cs">
+    <Compile Include="UserManagement\User\View\FrmUserList.Designer.cs">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Company\View\FrmCompanyList.resx">
+      <DependentUpon>FrmCompanyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\View\FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,10 +142,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserAccount\User\View\FrmUser.resx">
+    <EmbeddedResource Include="UserManagement\Control\MoneyTextBox.resx">
+      <DependentUpon>MoneyTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Control\MyPicture.resx">
+      <DependentUpon>MyPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\User\View\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount\User\View\FrmUserList.resx">
+    <EmbeddedResource Include="UserManagement\User\View\FrmUserList.resx">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -123,12 +167,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Manager\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database\Sopheak\Procedure.sql" />
-    <Content Include="Database\Sopheak\Sturcture.sql" />
+    <Content Include="Database\All\Procedure.sql" />
+    <Content Include="Database\All\Sturcture.sql" />
     <None Include="Resources\close.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\text_add.png" />
@@ -136,8 +178,208 @@
     <None Include="Resources\preview.png" />
     <None Include="Resources\edit.png" />
     <None Include="Resources\add 16x16.png" />
-    <Content Include="UserAccount\Database\Procedure.sql" />
-    <Content Include="UserAccount\Database\Table.sql" />
+    <Content Include="Resources\16\12.png" />
+    <Content Include="Resources\16\36.png" />
+    <Content Include="Resources\16\about.png" />
+    <Content Include="Resources\16\accept.png" />
+    <Content Include="Resources\16\add 16x16.png" />
+    <Content Include="Resources\16\adjust.png" />
+    <Content Include="Resources\16\backup.png" />
+    <Content Include="Resources\16\banking.png" />
+    <Content Include="Resources\16\Barcode.png" />
+    <Content Include="Resources\16\blank.png" />
+    <Content Include="Resources\16\calendar.png" />
+    <Content Include="Resources\16\check-in.png" />
+    <Content Include="Resources\16\check-out.png" />
+    <Content Include="Resources\16\clean_16x16.png" />
+    <Content Include="Resources\16\clock.png" />
+    <Content Include="Resources\16\close.png" />
+    <Content Include="Resources\16\confirmation.png" />
+    <Content Include="Resources\16\copy.png" />
+    <Content Include="Resources\16\delete 16x16.png" />
+    <Content Include="Resources\16\deposit.png" />
+    <Content Include="Resources\16\Dirty_16x16.png" />
+    <Content Include="Resources\16\document.png" />
+    <Content Include="Resources\16\document_selected.png" />
+    <Content Include="Resources\16\edit.png" />
+    <Content Include="Resources\16\folder_close.png" />
+    <Content Include="Resources\16\folder_open.png" />
+    <Content Include="Resources\16\folio.png" />
+    <Content Include="Resources\16\funnel.png" />
+    <Content Include="Resources\16\group.png" />
+    <Content Include="Resources\16\group_add.png" />
+    <Content Include="Resources\16\group_edit.png" />
+    <Content Include="Resources\16\group_reservation 16x16.png" />
+    <Content Include="Resources\16\Guest.png" />
+    <Content Include="Resources\16\guests.png" />
+    <Content Include="Resources\16\inspected_16x16.png" />
+    <Content Include="Resources\16\leave_message.png" />
+    <Content Include="Resources\16\log_out.png" />
+    <Content Include="Resources\16\log_out_1.png" />
+    <Content Include="Resources\16\next.png" />
+    <Content Include="Resources\16\preview.png" />
+    <Content Include="Resources\16\previous.png" />
+    <Content Include="Resources\16\printer.png" />
+    <Content Include="Resources\16\purchase-order.png" />
+    <Content Include="Resources\16\refresh.png" />
+    <Content Include="Resources\16\refresh_1.png" />
+    <Content Include="Resources\16\remove.png" />
+    <Content Include="Resources\16\reservation 16x16.png" />
+    <Content Include="Resources\16\reset.png" />
+    <Content Include="Resources\16\save.png" />
+    <Content Include="Resources\16\search.png" />
+    <Content Include="Resources\16\split.png" />
+    <Content Include="Resources\16\text_add.png" />
+    <Content Include="Resources\16\text_edit.png" />
+    <Content Include="Resources\16\transaction_closed.png" />
+    <Content Include="Resources\16\transfer.png" />
+    <Content Include="Resources\16\transfer_item.png" />
+    <Content Include="Resources\16\trush.png" />
+    <Content Include="Resources\16\unavailable_16x16.png" />
+    <Content Include="Resources\16\user.png" />
+    <Content Include="Resources\16\user_group.png" />
+    <Content Include="Resources\16\validate.png" />
+    <Content Include="Resources\16\void.png" />
+    <Content Include="Resources\16\voided.png" />
+    <Content Include="Resources\16\walk-in.png" />
+    <Content Include="Resources\24\aba 32x32.png" />
+    <Content Include="Resources\24\about 24x24.png" />
+    <Content Include="Resources\24\accounting_interface 24x24.png" />
+    <Content Include="Resources\24\accounting_setup 24x24.png" />
+    <Content Include="Resources\24\account_city_ledger.png" />
+    <Content Include="Resources\24\add 24x24.png" />
+    <Content Include="Resources\24\add_gray.png" />
+    <Content Include="Resources\24\adjust stock.png" />
+    <Content Include="Resources\24\Agent 24x24.png" />
+    <Content Include="Resources\24\audit_trial_report 24x24.png" />
+    <Content Include="Resources\24\availability 24x24.png" />
+    <Content Include="Resources\24\available room 24x24.png" />
+    <Content Include="Resources\24\balance.png" />
+    <Content Include="Resources\24\bg_gray.png" />
+    <Content Include="Resources\24\book_payment 24x24.png" />
+    <Content Include="Resources\24\calculator 24x24.png" />
+    <Content Include="Resources\24\call_monitoring 24x24.png" />
+    <Content Include="Resources\24\cancelled_reservation 24x24.png" />
+    <Content Include="Resources\24\cashier 24x24.png" />
+    <Content Include="Resources\24\cashier_1 24x24.png" />
+    <Content Include="Resources\24\chart.png" />
+    <Content Include="Resources\24\chart_bar.png" />
+    <Content Include="Resources\24\commit_daily_trnsaction 24x24.png" />
+    <Content Include="Resources\24\content 24x24.png" />
+    <Content Include="Resources\24\coupon.png" />
+    <Content Include="Resources\24\credit-card.png" />
+    <Content Include="Resources\24\current_stock.png" />
+    <Content Include="Resources\24\customer.png" />
+    <Content Include="Resources\24\daily_closing_report 24x24.png" />
+    <Content Include="Resources\24\dashboard.png" />
+    <Content Include="Resources\24\database_backup 24x24.png" />
+    <Content Include="Resources\24\database_restore 24x24.png" />
+    <Content Include="Resources\24\deactivate_key 24x24.png" />
+    <Content Include="Resources\24\delete 24x24.png" />
+    <Content Include="Resources\24\desk_folio 24x24.png" />
+    <Content Include="Resources\24\dollar-bill.png" />
+    <Content Include="Resources\24\employee.png" />
+    <Content Include="Resources\24\exit 24x24.png" />
+    <Content Include="Resources\24\external_account 24x24.png" />
+    <Content Include="Resources\24\find 24x24.png" />
+    <Content Include="Resources\24\folio_history 24x24.png" />
+    <Content Include="Resources\24\general_expense 24x24.png" />
+    <Content Include="Resources\24\general_note 24x24.png" />
+    <Content Include="Resources\24\group_reservation 24x24.png" />
+    <Content Include="Resources\24\group_reservation.png" />
+    <Content Include="Resources\24\guestinhouse.png" />
+    <Content Include="Resources\24\guest_profile 24x24.png" />
+    <Content Include="Resources\24\help 24x24.png" />
+    <Content Include="Resources\24\hotel_info 24x24.png" />
+    <Content Include="Resources\24\housekeeping 24x24.png" />
+    <Content Include="Resources\24\housekeeping_report 24x24.png" />
+    <Content Include="Resources\24\import.png" />
+    <Content Include="Resources\24\inhouse 24x24.png" />
+    <Content Include="Resources\24\invoice_setup.png" />
+    <Content Include="Resources\24\leave_message 24x24.png" />
+    <Content Include="Resources\24\lost_found 24x24.png" />
+    <Content Include="Resources\24\maintenance_list 24x24.png" />
+    <Content Include="Resources\24\master_invoice_option 24x24.png" />
+    <Content Include="Resources\24\mini_charge 24x24.png" />
+    <Content Include="Resources\24\money.png" />
+    <Content Include="Resources\24\money_add.png" />
+    <Content Include="Resources\24\money_delete.png" />
+    <Content Include="Resources\24\night_audit_log_report 24x24.png" />
+    <Content Include="Resources\24\over_booking 24x24.png" />
+    <Content Include="Resources\24\payroll.png" />
+    <Content Include="Resources\24\percentage.png" />
+    <Content Include="Resources\24\printer 24x24.png" />
+    <Content Include="Resources\24\product-variant.png" />
+    <Content Include="Resources\24\Product.png" />
+    <Content Include="Resources\24\product_begin.png" />
+    <Content Include="Resources\24\purchase.png" />
+    <Content Include="Resources\24\purchase_return.png" />
+    <Content Include="Resources\24\quick_room_panel24x24.png" />
+    <Content Include="Resources\24\ready_key 24x24.png" />
+    <Content Include="Resources\24\ready_key_1 24x24.png" />
+    <Content Include="Resources\24\report 24x24.png" />
+    <Content Include="Resources\24\report_1 24x24.png" />
+    <Content Include="Resources\24\report_2 24x24.png" />
+    <Content Include="Resources\24\reservation 24x24.png" />
+    <Content Include="Resources\24\reservation.png" />
+    <Content Include="Resources\24\reservation_1 24x24.png" />
+    <Content Include="Resources\24\reservation_add.png" />
+    <Content Include="Resources\24\room.png" />
+    <Content Include="Resources\24\room_map.png" />
+    <Content Include="Resources\24\room_material 24x24.png" />
+    <Content Include="Resources\24\room_setup 24x24.png" />
+    <Content Include="Resources\24\sale_return.png" />
+    <Content Include="Resources\24\setting 24x24.png" />
+    <Content Include="Resources\24\shift_report.png" />
+    <Content Include="Resources\24\shift_start.png" />
+    <Content Include="Resources\24\shift_stop.png" />
+    <Content Include="Resources\24\shift_template.png" />
+    <Content Include="Resources\24\split_payment.png" />
+    <Content Include="Resources\24\supplier.png" />
+    <Content Include="Resources\24\system_setup 24x24.png" />
+    <Content Include="Resources\24\today_checkin.png" />
+    <Content Include="Resources\24\today_checkout.png" />
+    <Content Include="Resources\24\transaction.png" />
+    <Content Include="Resources\24\transaction1.png" />
+    <Content Include="Resources\24\transfer.png" />
+    <Content Include="Resources\24\up-arrow.png" />
+    <Content Include="Resources\24\up-arrow_1.png" />
+    <Content Include="Resources\24\upset.png" />
+    <Content Include="Resources\24\user_account 24x24.png" />
+    <Content Include="Resources\24\utilities 24x24.png" />
+    <Content Include="Resources\24\visa.png" />
+    <Content Include="Resources\enter_2_25px.png" />
+    <Content Include="Resources\excel.jpg" />
+    <Content Include="Resources\loading.gif" />
+    <Content Include="Resources\Logo Green.png" />
+    <Content Include="Resources\msg_exclamation.png" />
+    <Content Include="Resources\msg_question.png" />
+    <Content Include="Resources\POS\aba_42.png" />
+    <Content Include="Resources\POS\acleda_42.png" />
+    <Content Include="Resources\POS\bd gift.png" />
+    <Content Include="Resources\POS\cash-icon.png" />
+    <Content Include="Resources\POS\cash-icon1.png" />
+    <Content Include="Resources\POS\cash_42.png" />
+    <Content Include="Resources\POS\pipay_42.png" />
+    <Content Include="Resources\POS\point_42.png" />
+    <Content Include="Resources\POS\pos_logo.png" />
+    <Content Include="Resources\POS\qr-code.png" />
+    <Content Include="Resources\POS\search_pos.png" />
+    <Content Include="Resources\POS\upgrade.jpg" />
+    <Content Include="Resources\POS\upgrade_card.png" />
+    <Content Include="Resources\POS\voucher_42.png" />
+    <Content Include="Resources\Queek Pos.png" />
+    <Content Include="Resources\question.png" />
+    <Content Include="Resources\upgrade_card.png" />
+    <Content Include="Resources\upset128.png" />
+    <Content Include="Database\Davin\Davin Alter.sql" />
+    <Content Include="Database\Haita\Haita Alter.sql" />
+    <Content Include="Database\Lyta\Lyta Alter.sql" />
+    <Content Include="UserManagement\Database\Procedure.sql" />
+    <Content Include="Database\Rathanak\Rathanak Alter.sql" />
+    <Content Include="Database\Samnang\Samnang Alter.sql" />
+    <Content Include="Database\Sreyne\Sreyne Alter.sql" />
+    <Content Include="UserManagement\Database\Table.sql" />
     <None Include="Resources\search.png" />
     <None Include="Resources\find 24x24.png" />
   </ItemGroup>

@@ -41,7 +41,7 @@
             this.dgvCompany.BackgroundColor = System.Drawing.SystemColors.Highlight;
             this.dgvCompany.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompany.GridColor = System.Drawing.Color.LightGray;
-            this.dgvCompany.Location = new System.Drawing.Point(-2, 59);
+            this.dgvCompany.Location = new System.Drawing.Point(12, 62);
             this.dgvCompany.Name = "dgvCompany";
             this.dgvCompany.ReadOnly = true;
             this.dgvCompany.RowTemplate.DividerHeight = 80;
@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Lime;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(655, 36);
+            this.label1.Location = new System.Drawing.Point(681, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.txtSearch.BackColor = System.Drawing.Color.Orchid;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.Location = new System.Drawing.Point(759, 33);
+            this.txtSearch.Location = new System.Drawing.Point(770, 33);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(342, 26);
             this.txtSearch.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 518);
+            this.ClientSize = new System.Drawing.Size(1130, 518);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvCompany);

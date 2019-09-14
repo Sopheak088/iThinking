@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,13 +18,25 @@ namespace ProjectManagement.Helper
             try
             {
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["Connection_String"].ConnectionString);
-                con.Open();
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
             return con;
+        }
+
+        public static void Close()
+        {
+            if (ToDatabase().State != ConnectionState.Closed)
+            {
+                ToDatabase().Close();
+            }
         }
     }
 }

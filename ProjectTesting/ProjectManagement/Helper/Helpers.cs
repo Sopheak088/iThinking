@@ -37,9 +37,16 @@ namespace ProjectManagement.Helper
             Image returnImage;
             try
             {
-                MemoryStream ms = new MemoryStream(byteArrayIn, 0, byteArrayIn.Length);
-                ms.Write(byteArrayIn, 0, byteArrayIn.Length);
-                returnImage = Image.FromStream(ms, true); //Exception occurs here
+                if (byteArrayIn != null)
+                {
+                    MemoryStream ms = new MemoryStream(byteArrayIn, 0, byteArrayIn.Length);
+                    ms.Write(byteArrayIn, 0, byteArrayIn.Length);
+                    returnImage = Image.FromStream(ms, true); //Exception occurs here
+                }
+                else
+                {
+                    returnImage = null;
+                }
             }
             catch (Exception exception)
             {

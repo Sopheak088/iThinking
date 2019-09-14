@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjectManagement.Company.View;
+using ProjectManagement.Manager;
 using ProjectManagement.UserAccount.User.View;
 
 namespace ProjectManagement
@@ -40,6 +35,27 @@ namespace ProjectManagement
             {
                 e.Cancel = true;
             }
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            COMPANY.Load_Company();
+            USER.Load_User();
+            MANAGE_ROLE.LoadRole();
+        }
+
+        private void CmdCompanyList_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmCompanyList frm = new FrmCompanyList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void CmdAddCompany_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmCompany frmCompany = new FrmCompany();
+            frmCompany.ShowDialog();
         }
     }
 }
