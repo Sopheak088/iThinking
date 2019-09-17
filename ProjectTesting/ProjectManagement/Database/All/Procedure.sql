@@ -58,3 +58,69 @@ BEGIN
       ,[UpdatedDate] = @UpdatedDate
 	  WHERE ID = @Id
 END
+
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[INSERT_USER]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].INSERT_USER
+GO
+ CREATE PROCEDURE INSERT_USER(
+								@Id UNIQUEIDENTIFIER,
+								@FirstName NVARCHAR(255),
+								@LastName NVARCHAR(255),
+								@Username NVARCHAR(255),
+								@Password NVARCHAR(255),
+								@Position NVARCHAR(255),
+								@Phone NVARCHAR(255),
+								@Active BIT,
+								@BranchId UNIQUEIDENTIFIER,
+								@CreatedBy NVARCHAR(255),
+								@CreatedDate DATETIME
+							  )
+AS 
+BEGIN
+	INSERT INTO [USER] (
+	   [ID]
+      ,[FirstName]
+      ,[LastName]
+      ,[Username]
+      ,[Password]
+      ,[Position]
+      ,[Phone]
+      ,[Active]
+      ,[BranchId]
+      ,[CreatedBy]
+      ,[CreatedDate])
+	VALUES(@Id,@FirstName,@LastName,@Username,@Password,@Position,@Phone,@Active,@BranchId,@CreatedBy,@CreatedDate)
+END
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[UPDATE_USER]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].UPDATE_USER
+GO
+ CREATE PROCEDURE UPDATE_USER(
+								@Id UNIQUEIDENTIFIER,
+								@FirstName NVARCHAR(255),
+								@LastName NVARCHAR(255),
+								@Username NVARCHAR(255),
+								@Password NVARCHAR(255),
+								@Position NVARCHAR(255),
+								@Phone NVARCHAR(255),
+								@Active BIT,
+								@BranchId UNIQUEIDENTIFIER,
+								@UpdatedBy NVARCHAR(255),
+								@UpdatedDate DATETIME
+							  )
+AS 
+BEGIN
+	UPDATE [USER] SET
+      [FirstName] = @FirstName
+      ,[LastName] = @LastName
+      ,[Username] = @Username
+      ,[Password] = @Password
+      ,[Position] = @Position
+      ,[Phone] = @Phone
+      ,[Active] = @Active
+      ,[BranchId] = @BranchId
+	  ,[UpdatedBy] = @UpdatedBy
+	  ,[UpdatedDate] = @UpdatedDate
+	  WHERE ID = @Id
+END

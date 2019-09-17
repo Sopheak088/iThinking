@@ -1,4 +1,4 @@
-﻿namespace ProjectManagement.UserAccount.User.View
+﻿namespace ProjectManagement.UserManagement.User.View
 {
     partial class FrmUserList
     {
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Janus.Windows.GridEX.GridEXLayout gridUserList_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
+            Janus.Windows.GridEX.GridEXLayout gridList_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserList));
             this.panelUser = new Janus.Windows.UI.Dock.UIPanel();
             this.panelUserContainer = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel2 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
-            this.gridUserList = new Janus.Windows.GridEX.GridEX();
+            this.gridList = new Janus.Windows.GridEX.GridEX();
             this.ctmsMenuBar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnNew = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEdit = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel1)).BeginInit();
             this.uiPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridUserList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridList)).BeginInit();
             this.ctmsMenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
@@ -126,21 +126,21 @@
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Panel 1";
             // 
-            // gridUserList
+            // gridList
             // 
-            this.gridUserList.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
-            this.gridUserList.ColumnAutoResize = true;
-            this.gridUserList.ContextMenuStrip = this.ctmsMenuBar;
-            gridUserList_DesignTimeLayout.LayoutString = resources.GetString("gridUserList_DesignTimeLayout.LayoutString");
-            this.gridUserList.DesignTimeLayout = gridUserList_DesignTimeLayout;
-            this.gridUserList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridUserList.FilterMode = Janus.Windows.GridEX.FilterMode.Manual;
-            this.gridUserList.GroupByBoxVisible = false;
-            this.gridUserList.Location = new System.Drawing.Point(0, 0);
-            this.gridUserList.Name = "gridUserList";
-            this.gridUserList.Size = new System.Drawing.Size(923, 312);
-            this.gridUserList.TabIndex = 0;
-            this.gridUserList.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2010;
+            this.gridList.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            this.gridList.ColumnAutoResize = true;
+            this.gridList.ContextMenuStrip = this.ctmsMenuBar;
+            gridList_DesignTimeLayout.LayoutString = resources.GetString("gridList_DesignTimeLayout.LayoutString");
+            this.gridList.DesignTimeLayout = gridList_DesignTimeLayout;
+            this.gridList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridList.FilterMode = Janus.Windows.GridEX.FilterMode.Manual;
+            this.gridList.GroupByBoxVisible = false;
+            this.gridList.Location = new System.Drawing.Point(0, 0);
+            this.gridList.Name = "gridList";
+            this.gridList.Size = new System.Drawing.Size(923, 144);
+            this.gridList.TabIndex = 0;
+            this.gridList.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2010;
             // 
             // ctmsMenuBar
             // 
@@ -166,6 +166,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(113, 22);
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnView
             // 
@@ -173,6 +174,7 @@
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(113, 22);
             this.btnView.Text = "View";
+            this.btnView.Click += new System.EventHandler(this.BtnView_Click);
             // 
             // btnRefresh
             // 
@@ -196,7 +198,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("83d2dcb8-0ffb-4873-a353-729b3b733fd4"), Janus.Windows.UI.Dock.PanelGroupStyle.HorizontalTiles, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(925, 387), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("83d2dcb8-0ffb-4873-a353-729b3b733fd4"), Janus.Windows.UI.Dock.PanelGroupStyle.HorizontalTiles, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(925, 214), true);
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("de1f1912-d111-4b4e-b42f-826bd482fd17"), new System.Guid("83d2dcb8-0ffb-4873-a353-729b3b733fd4"), 48, true);
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("d6333d30-d61f-4a07-ad93-c40bce8116bb"), new System.Guid("83d2dcb8-0ffb-4873-a353-729b3b733fd4"), 335, true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("83d2dcb8-0ffb-4873-a353-729b3b733fd4"), Janus.Windows.UI.Dock.PanelGroupStyle.HorizontalTiles, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
@@ -208,11 +210,10 @@
             // 
             this.panelMain.CaptionFormatStyle.BackColor = System.Drawing.Color.White;
             this.panelMain.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.True;
-            this.panelMain.Location = new System.Drawing.Point(3, 27);
+            this.panelMain.Location = new System.Drawing.Point(3, 3);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(925, 387);
+            this.panelMain.Size = new System.Drawing.Size(925, 214);
             this.panelMain.TabIndex = 4;
-            this.panelMain.Text = " Main";
             // 
             // panelFilter
             // 
@@ -220,7 +221,7 @@
             this.panelFilter.InnerContainer = this.uiPanel3Container;
             this.panelFilter.Location = new System.Drawing.Point(0, 24);
             this.panelFilter.Name = "panelFilter";
-            this.panelFilter.Size = new System.Drawing.Size(925, 45);
+            this.panelFilter.Size = new System.Drawing.Size(925, 40);
             this.panelFilter.TabIndex = 4;
             this.panelFilter.Text = "Filter";
             // 
@@ -229,7 +230,7 @@
             this.uiPanel3Container.Controls.Add(this.uiGroupBox1);
             this.uiPanel3Container.Location = new System.Drawing.Point(1, 1);
             this.uiPanel3Container.Name = "uiPanel3Container";
-            this.uiPanel3Container.Size = new System.Drawing.Size(923, 43);
+            this.uiPanel3Container.Size = new System.Drawing.Size(923, 38);
             this.uiPanel3Container.TabIndex = 0;
             // 
             // uiGroupBox1
@@ -243,7 +244,7 @@
             this.uiGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Size = new System.Drawing.Size(923, 43);
+            this.uiGroupBox1.Size = new System.Drawing.Size(923, 38);
             this.uiGroupBox1.TabIndex = 0;
             this.uiGroupBox1.Text = "Filter";
             // 
@@ -371,38 +372,37 @@
             // 
             this.UserList.CaptionVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.UserList.InnerContainer = this.panelDetail;
-            this.UserList.Location = new System.Drawing.Point(0, 73);
+            this.UserList.Location = new System.Drawing.Point(0, 68);
             this.UserList.Name = "UserList";
-            this.UserList.Size = new System.Drawing.Size(925, 314);
+            this.UserList.Size = new System.Drawing.Size(925, 146);
             this.UserList.TabIndex = 4;
             // 
             // panelDetail
             // 
-            this.panelDetail.Controls.Add(this.gridUserList);
+            this.panelDetail.Controls.Add(this.gridList);
             this.panelDetail.Location = new System.Drawing.Point(1, 1);
             this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(923, 312);
+            this.panelDetail.Size = new System.Drawing.Size(923, 144);
             this.panelDetail.TabIndex = 0;
             // 
             // FrmUserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 417);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(931, 220);
             this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Hanuman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmUserList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmUserList_Load);
+            this.Load += new System.EventHandler(this.FrmCompanyList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelUser)).EndInit();
             this.panelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel1)).EndInit();
             this.uiPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridUserList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridList)).EndInit();
             this.ctmsMenuBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).EndInit();
@@ -429,7 +429,7 @@
         private Janus.Windows.UI.Dock.UIPanel uiPanel2;
         private Janus.Windows.UI.Dock.UIPanelInnerContainer uiPanel1Container;
         private Janus.Windows.UI.Dock.UIPanel uiPanel1;
-        private Janus.Windows.GridEX.GridEX gridUserList;
+        private Janus.Windows.GridEX.GridEX gridList;
         private Janus.Windows.UI.Dock.UIPanelManager uiPanelManager1;
         private Janus.Windows.UI.Dock.UIPanelGroup panelMain;
         private Janus.Windows.UI.Dock.UIPanel panelFilter;
