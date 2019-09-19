@@ -365,6 +365,7 @@
     <Content Include="Resources\Logo Green.png" />
     <Content Include="Resources\msg_exclamation.png" />
     <Content Include="Resources\msg_question.png" />
+    <Content Include="Resources\photos.png" />
     <Content Include="Resources\POS\aba_42.png" />
     <Content Include="Resources\POS\acleda_42.png" />
     <Content Include="Resources\POS\bd gift.png" />

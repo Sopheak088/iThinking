@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using ProjectManagement.Company.Dao;
 using ProjectManagement.Company.Entity;
 using ProjectManagement.Manager;
+using ProjectManagement.UserManagement.User.View;
 
 namespace ProjectManagement
 {
@@ -31,10 +32,13 @@ namespace ProjectManagement
             MANAGE_ROLE.LoadRole();
             bool a = MANAGE_ROLE.ALLOW_ADD_COMPANY;
             bool b = MANAGE_ROLE.ALLOW_EDIT_COMPANY;
+            COMPANY.Load_Company();
+            USER.Load_User();
+            MANAGE_ROLE.LoadRole();
             //MessageBox.Show(new DateTime(2025, 6, 25).DayOfWeek.ToString());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogIn());
+            Application.Run(new FrmMain());
         }
     }
 }

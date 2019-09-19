@@ -38,6 +38,7 @@
             this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture.Image = global::ProjectManagement.Properties.Resources.photos;
             this.picture.Location = new System.Drawing.Point(0, 0);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(108, 126);
