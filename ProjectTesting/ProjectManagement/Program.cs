@@ -38,7 +38,7 @@ namespace ProjectManagement
             //MessageBox.Show(new DateTime(2025, 6, 25).DayOfWeek.ToString());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmUserList());
+            Application.Run(new FrmMain());
         }
     }
 }
