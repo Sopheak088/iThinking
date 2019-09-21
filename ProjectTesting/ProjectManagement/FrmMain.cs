@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using ProjectManagement.Company.View;
 using ProjectManagement.Manager;
-using ProjectManagement.UserAccount.User.View;
+using ProjectManagement.UserManagement.User.View;
 
 namespace ProjectManagement
 {
@@ -39,9 +39,6 @@ namespace ProjectManagement
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            COMPANY.Load_Company();
-            USER.Load_User();
-            MANAGE_ROLE.LoadRole();
         }
 
         private void CmdCompanyList_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)

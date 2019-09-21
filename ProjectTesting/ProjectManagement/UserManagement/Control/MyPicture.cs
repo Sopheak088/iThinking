@@ -25,15 +25,16 @@ namespace ProjectManagement.UserManagement.Control
         public byte[] GetByteArrayFromBrowse()
         {
             byte[] returnByte = null;
-            if (picture.Image != null)
+            if (PhotoByte != null)
             {
                 returnByte = PhotoByte;
             }
             else
             {
-                string path = Path.GetDirectoryName(Application.ExecutablePath);
-                path = path + "/photos.png";
-                returnByte = Helpers.StringToByteArray(path);
+                //var filePath = System.Reflection.Assembly.GetExecutingAssembly().Location + @"\..\..\Resources\photos.png";
+                //string path = Path.GetDirectoryName(Application.ExecutablePath);
+                //path = path + "/photos.png";
+                returnByte = Helpers.ImageToByteArray(ProjectManagement.Properties.Resources.photos);// Helpers.StringToByteArray(path);
             }
             return returnByte;
         }
