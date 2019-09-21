@@ -55,6 +55,14 @@
   <ItemGroup>
     <Compile Include="BaseObject\BaseClass.cs" />
     <Compile Include="BaseObject\FilterEntity.cs" />
+    <Compile Include="Branch\Dao\BranchDao.cs" />
+    <Compile Include="Branch\Entity\BranchEntity.cs" />
+    <Compile Include="Branch\View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company\Dao\CompanyDao.cs" />
     <Compile Include="Company\Entity\CompanyEntity.cs" />
     <Compile Include="Company\View\FrmCompanyList.cs">
@@ -119,6 +127,9 @@
     <Compile Include="UserManagement\User\View\FrmUserList.Designer.cs">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Branch\View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Company\View\FrmCompanyList.resx">
       <DependentUpon>FrmCompanyList.cs</DependentUpon>
     </EmbeddedResource>
