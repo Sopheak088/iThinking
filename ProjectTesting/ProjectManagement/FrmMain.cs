@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProjectManagement.Category.View;
 using ProjectManagement.Company.View;
 using ProjectManagement.Manager;
+using ProjectManagement.Product.View;
 using ProjectManagement.UserManagement.User.View;
 
 namespace ProjectManagement
@@ -53,6 +55,22 @@ namespace ProjectManagement
         {
             FrmCompany frmCompany = new FrmCompany();
             frmCompany.ShowDialog();
+        }
+
+        private void BtnCategory_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmCategoryList frm = new FrmCategoryList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void BtnProduct_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmProductList frm = new FrmProductList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
         }
     }
 }
