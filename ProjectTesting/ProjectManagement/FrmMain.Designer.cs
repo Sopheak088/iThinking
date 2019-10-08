@@ -235,6 +235,7 @@
             this.btnProduct.Key = "buttonCommand1";
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Text = "Product";
+            this.btnProduct.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnProduct_Click);
             // 
             // btnCategory
             // 
@@ -242,6 +243,7 @@
             this.btnCategory.Key = "buttonCommand1";
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Text = "Category";
+            this.btnCategory.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnCategory_Click);
             // 
             // ribbonGroup2
             // 
@@ -411,7 +413,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 204), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 205), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -421,7 +423,7 @@
             this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
             this.panelList.Location = new System.Drawing.Point(3, 166);
             this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(721, 204);
+            this.panelList.Size = new System.Drawing.Size(721, 205);
             this.panelList.TabIndex = 4;
             this.panelList.Text = "Panel 0";
             // 
@@ -436,7 +438,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 373);
+            this.ClientSize = new System.Drawing.Size(727, 374);
             this.Controls.Add(this.panelList);
             this.Controls.Add(this.ribbon1);
             this.Font = new System.Drawing.Font("Hanuman", 9F);
