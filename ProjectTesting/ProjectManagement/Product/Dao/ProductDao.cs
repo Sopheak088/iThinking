@@ -54,6 +54,7 @@ namespace ProjectManagement.Product.Dao
                         productEntity.CategoryId = (Guid)reader["CategoryID"];
                         productEntity.ProductName = reader["ProductName"].ToString();
                         productEntity.Price = decimal.Parse(reader["Price"].ToString());
+                        productEntity.Quantity = int.Parse(reader["Quantity"].ToString());
                         productEntity.MadeDate = DateTime.Parse(reader["MadeDate"].ToString());
                         productEntity.ExpireDate = DateTime.Parse(reader["ExpireDate"].ToString());
                         productEntity.Barcode = reader["Barcode"].ToString();
@@ -144,6 +145,7 @@ namespace ProjectManagement.Product.Dao
                 com.Parameters.AddWithValue("@CategoryId", productEntity.CategoryId);
                 com.Parameters.AddWithValue("@ProductName", productEntity.ProductName);
                 com.Parameters.AddWithValue("@Price", productEntity.Price);
+                com.Parameters.AddWithValue("@Quantity", productEntity.Quantity);
                 com.Parameters.AddWithValue("@MadeDate", productEntity.MadeDate);
                 com.Parameters.AddWithValue("@ExpireDate", productEntity.ExpireDate);
                 com.Parameters.AddWithValue("@Barcode", productEntity.Barcode);
@@ -177,6 +179,7 @@ namespace ProjectManagement.Product.Dao
                 com.Parameters.AddWithValue("@CategoryId", productEntity.CategoryId);
                 com.Parameters.AddWithValue("@ProductName", productEntity.ProductName);
                 com.Parameters.AddWithValue("@Price", productEntity.Price);
+                com.Parameters.AddWithValue("@Quantity", productEntity.Quantity);
                 com.Parameters.AddWithValue("@MadeDate", productEntity.MadeDate);
                 com.Parameters.AddWithValue("@ExpireDate", productEntity.ExpireDate);
                 com.Parameters.AddWithValue("@Barcode", productEntity.Barcode);

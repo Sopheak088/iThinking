@@ -15,6 +15,7 @@ CREATE TABLE PRODUCT(
 	CONSTRAINT CATEGORY_PK_PRODUCT_FK FOREIGN KEY (CategoryID) REFERENCES CATEGORY(ID),
 	ProductName NVARCHAR(MAX) COLLATE Khmer_100_BIN NOT NULL,
 	Price MONEY NOT NULL,
+	Quantity INT NULL,
 	MadeDate DATETIME NOT NULL,
 	[ExpireDate] DATETIME NOT NULL,
 	Photo VARBINARY(MAX) NOT NULL,
@@ -69,6 +70,7 @@ CREATE PROCEDURE [dbo].[INSERT_PRODUCT](
 	@CategoryID UNIQUEIDENTIFIER,
 	@ProductName NVARCHAR(MAX),
 	@Price MONEY,
+	@Quantity INT,
 	@MadeDate DATETIME,
 	@ExpireDate DATETIME,
 	@Photo VARBINARY(MAX),
@@ -84,6 +86,7 @@ INSERT INTO PRODUCT(
 			CategoryID,
 			ProductName,
 			Price,
+			Quantity,
 			MadeDate,
 			[ExpireDate],
 			Photo,
@@ -92,7 +95,7 @@ INSERT INTO PRODUCT(
 			CreatedBy,
 			CreatedDate
 			)
-VALUES(@Id, @CategoryID,@ProductName,@Price, @MadeDate,@ExpireDate,@Photo,@BarCode,@Active, @CreatedBy,@CreatedDate)
+VALUES(@Id, @CategoryID,@ProductName,@Price,@Quantity, @MadeDate,@ExpireDate,@Photo,@BarCode,@Active, @CreatedBy,@CreatedDate)
 END
 GO
 
@@ -101,6 +104,7 @@ CREATE PROCEDURE UPDATE_PRODUCT(
 								@CategoryId UNIQUEIDENTIFIER,
 								@ProductName NVARCHAR(MAX),
 								@Price MONEY,
+								@Quantity INT,
 								@MadeDate DATETIME,
 								@ExpireDate DATETIME,
 								@Photo VARBINARY(MAX),
@@ -115,6 +119,7 @@ BEGIN
 	CategoryID = @CategoryId,
 	ProductName = @ProductName,
 	Price = @Price,
+	Quantity = @Quantity,
 	MadeDate = @MadeDate,
 	[ExpireDate] = @ExpireDate,
 	Photo=@Photo,
@@ -123,5 +128,12 @@ BEGIN
 	UpdatedBy=@UpdatedBy,
 	UpdatedDate=@UpdatedDate
 	WHERE ID = @Id
+END
+GO
+CREATE PROCEDURE UserLogin(@uid varchar(max),@pwd varchar(max))
+AS
+BEGIN
+	SELECT * FROM [USER]
+	WHERE [Username] = @uid and [Password] =@pwd
 END
 GO

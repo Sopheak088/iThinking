@@ -66,11 +66,11 @@ namespace ProjectManagement.Product.View
             DataTable data = new DataTable();
             data= ProductDao.FilterListProduct(filterEntity);
             gridList.DataSource = data;
-            int count = data.Rows.Count;
+            /*int count = data.Rows.Count;
             if (count == 0)
             {
                 MessageBox.Show("Search not found!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
            // gridList.Refresh();
 
         }
@@ -80,10 +80,8 @@ namespace ProjectManagement.Product.View
         }
         private void BtnNew_Click(object sender, EventArgs e)
         {
-            this.Hide();//Hide the form
             FrmProduct frmProduct = new FrmProduct();
             frmProduct.ShowDialog();
-            this.Close();//Close the form
             
             if(frmProduct.SaveCompleted)
             {
@@ -96,10 +94,8 @@ namespace ProjectManagement.Product.View
             if(currentRow != null || currentRow.RowType == RowType.Record)
             {
                 Guid id = Guid.Parse(currentRow.Cells["ID"].Value.ToString());
-                this.Hide();
                 FrmProduct frmProduct = new FrmProduct(true, id);
                 frmProduct.ShowDialog();
-                this.Close();
                 
                 if (frmProduct.SaveCompleted)
                 {
@@ -113,10 +109,8 @@ namespace ProjectManagement.Product.View
             if (currentRow != null || currentRow.RowType == RowType.Record)
             {
                 Guid id = Guid.Parse(currentRow.Cells["ID"].Value.ToString());
-                this.Hide();
                 FrmProduct frmProduct = new FrmProduct(false, id);
                 frmProduct.ShowDialog();
-                this.Close();
                 
             }
         }

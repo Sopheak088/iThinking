@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.myPicture1 = new ProjectManagement.UserManagement.Control.MyPicture();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             this.chkActive.AutoSize = true;
             this.chkActive.Checked = true;
             this.chkActive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkActive.Location = new System.Drawing.Point(155, 257);
+            this.chkActive.Location = new System.Drawing.Point(155, 268);
             this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(64, 20);
@@ -66,7 +68,7 @@
             // 
             // txtBarcode
             // 
-            this.txtBarcode.Location = new System.Drawing.Point(155, 177);
+            this.txtBarcode.Location = new System.Drawing.Point(155, 193);
             this.txtBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(360, 22);
@@ -75,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 178);
+            this.label3.Location = new System.Drawing.Point(28, 194);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 16);
@@ -84,7 +86,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(155, 66);
+            this.txtPrice.Location = new System.Drawing.Point(155, 60);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(360, 22);
@@ -96,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 68);
+            this.label2.Location = new System.Drawing.Point(28, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 16);
@@ -166,7 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 106);
+            this.label6.Location = new System.Drawing.Point(28, 129);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 16);
@@ -176,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 141);
+            this.label7.Location = new System.Drawing.Point(28, 164);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 16);
@@ -187,7 +189,7 @@
             // 
             this.dtpMadeDate.CustomFormat = "dd/MM/yyyy";
             this.dtpMadeDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMadeDate.Location = new System.Drawing.Point(155, 101);
+            this.dtpMadeDate.Location = new System.Drawing.Point(155, 124);
             this.dtpMadeDate.Name = "dtpMadeDate";
             this.dtpMadeDate.Size = new System.Drawing.Size(360, 22);
             this.dtpMadeDate.TabIndex = 2;
@@ -196,7 +198,7 @@
             // 
             this.dtpExpireDate.CustomFormat = "dd/MM/yyyy";
             this.dtpExpireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpExpireDate.Location = new System.Drawing.Point(155, 136);
+            this.dtpExpireDate.Location = new System.Drawing.Point(155, 159);
             this.dtpExpireDate.Name = "dtpExpireDate";
             this.dtpExpireDate.Size = new System.Drawing.Size(360, 22);
             this.dtpExpireDate.TabIndex = 3;
@@ -208,7 +210,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 217);
+            this.label4.Location = new System.Drawing.Point(28, 231);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 16);
@@ -218,7 +220,7 @@
             // cboCategory
             // 
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(155, 214);
+            this.cboCategory.Location = new System.Drawing.Point(155, 228);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(360, 24);
             this.cboCategory.TabIndex = 5;
@@ -232,11 +234,31 @@
             this.myPicture1.Size = new System.Drawing.Size(144, 154);
             this.myPicture1.TabIndex = 7;
             // 
+            // txtQty
+            // 
+            this.txtQty.Location = new System.Drawing.Point(155, 95);
+            this.txtQty.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(360, 22);
+            this.txtQty.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 97);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Quantity";
+            // 
             // FrmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 344);
+            this.Controls.Add(this.txtQty);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpExpireDate);
@@ -286,5 +308,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboCategory;
+        private System.Windows.Forms.TextBox txtQty;
+        private System.Windows.Forms.Label label5;
     }
 }

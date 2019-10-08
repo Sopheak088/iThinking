@@ -29,6 +29,7 @@ namespace ProjectManagement.Product.View
                 this.Text = this.Text + productID;//Show ID on the top of the form
                 txtProductName.Text = productEntity.ProductName;
                 txtPrice.Text = productEntity.Price.ToString();
+                txtQty.Text = productEntity.Quantity.ToString();
                 dtpMadeDate.Text = productEntity.MadeDate.ToString();
                 dtpExpireDate.Text = productEntity.ExpireDate.ToString();
                 txtBarcode.Text = productEntity.Barcode;
@@ -82,7 +83,7 @@ namespace ProjectManagement.Product.View
         private void ClearData()
         {
             productID = Guid.Empty;
-            txtProductName.Text = txtPrice.Text = txtBarcode.Text = dtpMadeDate.Text=dtpExpireDate.Text = null;
+            txtProductName.Text = txtPrice.Text = txtQty.Text = txtBarcode.Text = dtpMadeDate.Text=dtpExpireDate.Text = null;
             myPicture1.ClearImage();
             cboCategory.SelectedItem = -1;
         }
@@ -101,6 +102,7 @@ namespace ProjectManagement.Product.View
                 ProductEntity productEntity = new ProductEntity();
                 productEntity.ProductName = txtProductName.Text;
                 productEntity.Price = decimal.Parse(txtPrice.Text, NumberStyles.Currency);
+                productEntity.Quantity = int.Parse(txtQty.Text);
                 productEntity.Barcode = txtBarcode.Text;
                 productEntity.MadeDate = DateTime.Parse(dtpMadeDate.Text);
                 productEntity.ExpireDate = DateTime.Parse(dtpExpireDate.Text);

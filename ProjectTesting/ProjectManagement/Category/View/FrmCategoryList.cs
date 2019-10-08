@@ -109,7 +109,7 @@ namespace ProjectManagement.Category.View
             {
                 //Note*
                 Guid id = Guid.Parse(currentRow.Cells["ID"].Value.ToString());
-                FrmCategory frmCategory = new FrmCategory(true, id);
+                FrmCategory frmCategory = new FrmCategory(false, id);
                 frmCategory.ShowDialog();
             }
         }

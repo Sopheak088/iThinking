@@ -49,6 +49,7 @@
             this.btnEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.btnView = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRefresh = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiGroupBox1)).BeginInit();
             this.uiGroupBox1.SuspendLayout();
@@ -59,12 +60,13 @@
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.uiGroupBox1);
             this.panelMain.Controls.Add(this.gridList);
+            this.panelMain.Controls.Add(this.panel2);
+            this.panelMain.Controls.Add(this.uiGroupBox1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(929, 385);
+            this.panelMain.Size = new System.Drawing.Size(929, 381);
             this.panelMain.TabIndex = 0;
             // 
             // uiGroupBox1
@@ -170,10 +172,12 @@
             // 
             // rdoAllDays
             // 
+            this.rdoAllDays.Checked = true;
             this.rdoAllDays.Location = new System.Drawing.Point(3, 15);
             this.rdoAllDays.Name = "rdoAllDays";
             this.rdoAllDays.Size = new System.Drawing.Size(73, 23);
             this.rdoAllDays.TabIndex = 1;
+            this.rdoAllDays.TabStop = true;
             this.rdoAllDays.Text = "All Days";
             this.rdoAllDays.VisualStyle = Janus.Windows.UI.VisualStyle.Office2010;
             this.rdoAllDays.CheckedChanged += new System.EventHandler(this.RdoAllDays_CheckedChanged);
@@ -184,11 +188,11 @@
             this.gridList.ColumnAutoResize = true;
             gridList_DesignTimeLayout.LayoutString = resources.GetString("gridList_DesignTimeLayout.LayoutString");
             this.gridList.DesignTimeLayout = gridList_DesignTimeLayout;
-            this.gridList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridList.GroupByBoxVisible = false;
-            this.gridList.Location = new System.Drawing.Point(0, 76);
+            this.gridList.Location = new System.Drawing.Point(0, 77);
             this.gridList.Name = "gridList";
-            this.gridList.Size = new System.Drawing.Size(929, 309);
+            this.gridList.Size = new System.Drawing.Size(929, 304);
             this.gridList.TabIndex = 0;
             this.gridList.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2010;
             // 
@@ -234,15 +238,25 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 77);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(929, 304);
+            this.panel2.TabIndex = 2;
+            // 
             // FrmCategoryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 385);
+            this.ClientSize = new System.Drawing.Size(929, 381);
             this.ContextMenuStrip = this.CtmsMenuBar;
             this.Controls.Add(this.panelMain);
+            this.MaximizeBox = false;
             this.Name = "FrmCategoryList";
             this.Text = "FrmCategoryList";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCategoryList_Load);
             this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiGroupBox1)).EndInit();
@@ -276,5 +290,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnEdit;
         private System.Windows.Forms.ToolStripMenuItem btnView;
         private System.Windows.Forms.ToolStripMenuItem btnRefresh;
+        private System.Windows.Forms.Panel panel2;
     }
 }
