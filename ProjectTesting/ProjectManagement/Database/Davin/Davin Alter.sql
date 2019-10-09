@@ -110,6 +110,33 @@ INSERT INTO CUSTOMER(
 VALUES(@ID ,@CustomerName,@Gender,@Address,@Photo,@Active,@OtherContact,@MemberShipID ,@CreateBy,@CreatedDate)
 END
 GO
+CREATE PROCEDURE [dbo].[UPDATE_CUSTOMER](
+								@ID UNIQUEIDENTIFIER,
+								@CustomerName NVARCHAR(MAX),
+								@Gender VARCHAR(MAX),
+								@Address NVARCHAR(MAX),
+								@Photo VARBINARY(MAX),
+								@Active BIT,
+								@OtherContact VARCHAR(MAX),
+								@MemberShipID UNIQUEIDENTIFIER,
+								@UpdateBy NVARCHAR(MAX),
+								@UpdateDate DATETIME)
+								
+AS
+BEGIN
+UPDATE CUSTOMER SET
+[CustomerName]=@CustomerName
+,[Gender]=@Gender
+,[Address]=@Address
+,[Photo]=@Photo
+,[Active]=@Active
+,[OtherContact]=@OtherContact
+,[MemberShipID]=@MemberShipID
+,[UpdateBy]=@UpdateBy
+,[UpdateDate]=@UpdateDate
+WHERE ID=@ID
+END
+GO
 CREATE TABLE INVOICE
 (
 	ID  UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
