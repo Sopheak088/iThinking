@@ -127,7 +127,7 @@ namespace ProjectTesting.Product.View
             catch (Exception ex)
             {
                 // write exception info to log or anything else
-                MessageBox.Show("Error occured!");
+                MessageBox.Show("Error occured!" + ex);
             }
             Connection.ToDatabase().Close();
         }
