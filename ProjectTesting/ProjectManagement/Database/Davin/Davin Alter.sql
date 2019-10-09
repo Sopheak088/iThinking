@@ -29,7 +29,7 @@ BEGIN
 INSERT INTO MEMBERSHIP(
 [ID]
 ,[MembershipType]
-,[DiscountValue ]
+,[DiscountValue]
 ,[DiscountText]
 ,[Other]
 ,[CreateBy]
@@ -61,6 +61,25 @@ BEGIN
       ,[UpdateDate] = @UpdateDate
 	  WHERE ID = @ID
 END
+GO
+CREATE TABLE [dbo].[CUSTOMER](
+	[ID] [uniqueidentifier] NOT NULL DEFAULT (newid()),
+	[CustomerName] [nvarchar](max) NULL,
+	[Gender] [varchar](max) NULL,
+	[Address] [nvarchar](max) NULL,
+	[Photo] [varbinary](max) NULL,
+	[Active] [bit] NULL,
+	[OtherContact] [varchar](max) NULL,
+	[MemberShipID] [uniqueidentifier] NULL,
+	[CreateBy] [nvarchar](max) NULL,
+	[CreateDate] [datetime] NULL,
+	[UpdateBy] [nvarchar](max) NULL,
+	[UpdateDate] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 create PROCEDURE INSERT_CUSTOMER(
 								@ID UNIQUEIDENTIFIER,
