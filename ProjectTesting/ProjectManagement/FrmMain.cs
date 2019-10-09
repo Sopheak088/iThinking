@@ -2,7 +2,9 @@
 using System.Windows.Forms;
 using ProjectManagement.Category.View;
 using ProjectManagement.Company.View;
+using ProjectManagement.Customer.View;
 using ProjectManagement.Manager;
+using ProjectManagement.MemberShip.View;
 using ProjectManagement.Product.View;
 using ProjectManagement.UserManagement.User.View;
 
@@ -68,6 +70,22 @@ namespace ProjectManagement
         private void BtnProduct_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
         {
             FrmProductList frm = new FrmProductList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void CmdCustomerProfile_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmCustomerList frm = new FrmCustomerList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void BtnMemberShip_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmMemberShipList frm = new FrmMemberShipList { TopLevel = false, AutoScroll = true };
             panelList.Controls.Add(frm);
             panelList.Visible = true;
             frm.Show();

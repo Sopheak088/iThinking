@@ -136,6 +136,7 @@
             this.cmdCustomerProfile.Key = "buttonCommand1";
             this.cmdCustomerProfile.Name = "cmdCustomerProfile";
             this.cmdCustomerProfile.Text = "Customer Profile";
+            this.cmdCustomerProfile.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.CmdCustomerProfile_Click);
             // 
             // btnMemberShip
             // 
@@ -143,6 +144,7 @@
             this.btnMemberShip.Key = "buttonCommand4";
             this.btnMemberShip.Name = "btnMemberShip";
             this.btnMemberShip.Text = "Member ship";
+            this.btnMemberShip.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnMemberShip_Click);
             // 
             // ribbonGroup5
             // 
@@ -413,7 +415,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 205), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 206), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -423,7 +425,7 @@
             this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
             this.panelList.Location = new System.Drawing.Point(3, 166);
             this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(721, 205);
+            this.panelList.Size = new System.Drawing.Size(721, 206);
             this.panelList.TabIndex = 4;
             this.panelList.Text = "Panel 0";
             // 
@@ -438,7 +440,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 374);
+            this.ClientSize = new System.Drawing.Size(727, 375);
             this.Controls.Add(this.panelList);
             this.Controls.Add(this.ribbon1);
             this.Font = new System.Drawing.Font("Hanuman", 9F);
