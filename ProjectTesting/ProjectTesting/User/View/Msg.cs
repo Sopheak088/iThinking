@@ -2,5 +2,6 @@
 {
     internal class Msg
     {
+        private int id;
     }
 }
