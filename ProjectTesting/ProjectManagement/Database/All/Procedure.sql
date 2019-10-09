@@ -124,3 +124,65 @@ BEGIN
 	  ,[UpdatedDate] = @UpdatedDate
 	  WHERE ID = @Id
 END
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[INSERT_CUSTOMER]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].INSERT_CUSTOMER
+go
+create PROCEDURE INSERT_CUSTOMER(
+								@ID UNIQUEIDENTIFIER,
+								@CustomerName NVARCHAR(MAX),
+								@Gender VARCHAR(MAX),
+								@Address NVARCHAR(MAX),
+								@Photo VARBINARY(MAX),
+								@Active BIT,
+								@OtherContact VARCHAR(MAX),
+								@MemberShipID UNIQUEIDENTIFIER,
+								@CreateBy NVARCHAR(MAX),
+								@CreatedDate DATETIME)
+								
+AS
+BEGIN
+INSERT INTO CUSTOMER(
+[ID]
+,[CustomerName]
+,[Gender]
+,[Address]
+,[Photo]
+,[Active]
+,[OtherContact]
+,[MemberShipID]
+,[CreateBy]
+,[CreateDate]
+)
+VALUES(@ID ,@CustomerName,@Gender,@Address,@Photo,@Active,@OtherContact,@MemberShipID ,@CreateBy,@CreatedDate)
+END
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[UPDATE_CUSTOMER]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure [dbo].UPDATE_CUSTOMER
+go
+create PROCEDURE UPDATE_CUSTOMER(
+								@ID UNIQUEIDENTIFIER,
+								@CustomerName NVARCHAR(MAX),
+								@Gender VARCHAR(MAX),
+								@Address NVARCHAR(MAX),
+								@Photo VARBINARY(MAX),
+								@Active BIT,
+								@OtherContact VARCHAR(MAX),
+								@MemberShipID UNIQUEIDENTIFIER,
+								@UpdateBy NVARCHAR(MAX),
+								@UpdateDate DATETIME)
+								
+AS
+BEGIN
+UPDATE CUSTOMER SET
+[CustomerName]=@CustomerName
+,[Gender]=@Gender
+,[Address]=@Address
+,[Photo]=@Photo
+,[Active]=@Active
+,[OtherContact]=@OtherContact
+,[MemberShipID]=@MemberShipID
+,[UpdateBy]=@UpdateBy
+,[UpdateDate]=@UpdateDate
+WHERE ID=@ID
+END

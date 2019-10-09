@@ -1,6 +1,6 @@
 ﻿namespace ProjectManagement.MemberShip.View
 {
-    partial class MemberShipList
+    partial class FrmMemberShipList
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Janus.Windows.GridEX.GridEXLayout gridList_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberShipList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMemberShipList));
             this.uiPanelManager1 = new Janus.Windows.UI.Dock.UIPanelManager(this.components);
             this.uiPanel0 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
@@ -57,16 +57,16 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("b9754904-1a5b-4dae-8f2f-0b8b4f15292b"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(719, 593), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("b9754904-1a5b-4dae-8f2f-0b8b4f15292b"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(719, 617), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("b9754904-1a5b-4dae-8f2f-0b8b4f15292b"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
             // uiPanel0
             // 
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
-            this.uiPanel0.Location = new System.Drawing.Point(3, 27);
+            this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(719, 593);
+            this.uiPanel0.Size = new System.Drawing.Size(719, 617);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Panel 0";
             // 
@@ -75,7 +75,7 @@
             this.uiPanel0Container.Controls.Add(this.gridList);
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 25);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(717, 567);
+            this.uiPanel0Container.Size = new System.Drawing.Size(717, 591);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // gridList
@@ -88,7 +88,7 @@
             this.gridList.GroupByBoxVisible = false;
             this.gridList.Location = new System.Drawing.Point(0, 0);
             this.gridList.Name = "gridList";
-            this.gridList.Size = new System.Drawing.Size(717, 567);
+            this.gridList.Size = new System.Drawing.Size(717, 591);
             this.gridList.TabIndex = 0;
             this.gridList.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2010;
             // 
@@ -100,35 +100,39 @@
             this.btnView,
             this.btnRefresh});
             this.ctmMenu.Name = "ctmMenu";
-            this.ctmMenu.Size = new System.Drawing.Size(181, 114);
+            this.ctmMenu.Size = new System.Drawing.Size(124, 92);
             // 
             // btnNew
             // 
             this.btnNew.Image = global::ProjectManagement.Properties.Resources.add_16x16;
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(180, 22);
+            this.btnNew.Size = new System.Drawing.Size(123, 22);
             this.btnNew.Text = "Add New";
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Image = global::ProjectManagement.Properties.Resources.edit;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(180, 22);
+            this.btnEdit.Size = new System.Drawing.Size(123, 22);
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnView
             // 
             this.btnView.Image = global::ProjectManagement.Properties.Resources.search;
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(180, 22);
+            this.btnView.Size = new System.Drawing.Size(123, 22);
             this.btnView.Text = "View";
+            this.btnView.Click += new System.EventHandler(this.BtnView_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.Image = global::ProjectManagement.Properties.Resources.refresh;
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(180, 22);
+            this.btnRefresh.Size = new System.Drawing.Size(123, 22);
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // MemberShipList
             // 

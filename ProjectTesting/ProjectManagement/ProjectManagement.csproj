@@ -69,6 +69,20 @@
     <Compile Include="Company\View\FrmCompany.Designer.cs">
       <DependentUpon>FrmCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Dao\CustomerDao.cs" />
+    <Compile Include="Customer\Entity\CustomerEntity.cs" />
+    <Compile Include="Customer\View\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\View\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,17 +98,37 @@
     <Compile Include="Helper\Connect.cs" />
     <Compile Include="Helper\Helpers.cs" />
     <Compile Include="Helper\StringCipher.cs" />
+    <Compile Include="Invoice\Dao\InvoiceDao.cs" />
+    <Compile Include="Invoice\Entity\InvoiceEntity.cs" />
+    <Compile Include="Invoice\View\FrmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\View\FrmInvoice.Designer.cs">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\View\FrmInvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\View\FrmInvoiceList.Designer.cs">
+      <DependentUpon>FrmInvoiceList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\COMPANY.cs" />
     <Compile Include="Manager\CONFIG.cs" />
     <Compile Include="Manager\MANAGE_ROLE.cs" />
     <Compile Include="Manager\USER.cs" />
     <Compile Include="MemberShip\Dao\MembershipDao.cs" />
     <Compile Include="MemberShip\Entity\MemberShipEntity.cs" />
-    <Compile Include="MemberShip\View\MemberShipList.cs">
+    <Compile Include="MemberShip\View\FrmMemberShip.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberShip\View\MemberShipList.Designer.cs">
-      <DependentUpon>MemberShipList.cs</DependentUpon>
+    <Compile Include="MemberShip\View\FrmMemberShip.Designer.cs">
+      <DependentUpon>FrmMemberShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberShip\View\FrmMemberShipList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberShip\View\FrmMemberShipList.Designer.cs">
+      <DependentUpon>FrmMemberShipList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,14 +167,23 @@
     <EmbeddedResource Include="Company\View\FrmCompany.resx">
       <DependentUpon>FrmCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberShip\View\MemberShipList.resx">
-      <DependentUpon>MemberShipList.cs</DependentUpon>
+    <EmbeddedResource Include="MemberShip\View\FrmMemberShip.resx">
+      <DependentUpon>FrmMemberShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberShip\View\FrmMemberShipList.resx">
+      <DependentUpon>FrmMemberShipList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
