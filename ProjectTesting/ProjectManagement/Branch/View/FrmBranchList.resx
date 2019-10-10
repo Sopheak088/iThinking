@@ -117,56 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Thumbnail_2019_February12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thumbnail_2019_February12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b6f170563350682fa842eb51d829774f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b6f170563350682fa842eb51d829774f1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="find 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="photos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="240_F_282792498_DyK7hyYaIPS10xjwqaxxXKRRO4cxjCem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\240_F_282792498_DyK7hyYaIPS10xjwqaxxXKRRO4cxjCem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="22794357_503570836692010_1507685141831483392_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\22794357_503570836692010_1507685141831483392_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add 16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b6f170563350682fa842eb51d829774f" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b6f170563350682fa842eb51d829774f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\text_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bobapins_1024x1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bobapins_1024x1024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cute-couple-bubble-milk-ice-tea-plastic-container-banner_33403-197" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cute-couple-bubble-milk-ice-tea-plastic-container-banner_33403-197.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="ctmMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="gridList_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="ID"&gt;&lt;Caption&gt;ID&lt;/Caption&gt;&lt;DataMember&gt;ID&lt;/DataMember&gt;&lt;Key&gt;ID&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column0&gt;&lt;Column1 ID="Name"&gt;&lt;Caption&gt;NAME&lt;/Caption&gt;&lt;DataMember&gt;Name&lt;/DataMember&gt;&lt;Key&gt;Name&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;134&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="Email"&gt;&lt;Caption&gt;EMAIL&lt;/Caption&gt;&lt;DataMember&gt;Email&lt;/DataMember&gt;&lt;Key&gt;Email&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;134&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="Phone"&gt;&lt;Caption&gt;PHONE&lt;/Caption&gt;&lt;DataMember&gt;Phone&lt;/DataMember&gt;&lt;Key&gt;Phone&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;134&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="Location"&gt;&lt;Caption&gt;LOCATION&lt;/Caption&gt;&lt;DataMember&gt;Location&lt;/DataMember&gt;&lt;Key&gt;Location&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Width&gt;184&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="Active"&gt;&lt;Caption&gt;ACTIVE&lt;/Caption&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;Active&lt;/DataMember&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;Active&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;Width&gt;61&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="CompanyID"&gt;&lt;Caption&gt;COMPANY ID&lt;/Caption&gt;&lt;DataMember&gt;CompanyID&lt;/DataMember&gt;&lt;Key&gt;CompanyID&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column6&gt;&lt;Column7 ID="CreatedBy"&gt;&lt;Caption&gt;CREATED BY&lt;/Caption&gt;&lt;DataMember&gt;CreatedBy&lt;/DataMember&gt;&lt;Key&gt;CreatedBy&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;Width&gt;142&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="CreatedDate"&gt;&lt;Caption&gt;CREATED DATE&lt;/Caption&gt;&lt;DataMember&gt;CreatedDate&lt;/DataMember&gt;&lt;Key&gt;CreatedDate&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;Width&gt;139&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="UpdatedBy"&gt;&lt;Caption&gt;UPDATED BY&lt;/Caption&gt;&lt;DataMember&gt;UpdatedBy&lt;/DataMember&gt;&lt;Key&gt;UpdatedBy&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;Width&gt;127&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="UpdatedDate"&gt;&lt;Caption&gt;Updated Date&lt;/Caption&gt;&lt;DataMember&gt;UpdatedDate&lt;/DataMember&gt;&lt;Key&gt;UpdatedDate&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;Width&gt;96&lt;/Width&gt;&lt;/Column10&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;8&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
   </data>
 </root>

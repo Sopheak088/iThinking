@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using ProjectManagement.BaseObject;
 using ProjectManagement.Branch.Entity;
+using ProjectManagement.Company.Entity;
 using ProjectManagement.Helper;
 using ProjectManagement.UserManagement.ClassDao;
 
@@ -12,26 +13,46 @@ namespace ProjectManagement.Branch.Dao
 {
     public static class BranchDao
     {
-        /*public static byte[] GetPhoto(Guid id)
+        public static DataTable GetCompanyToComboBox()
         {
-            return SelectPicture.GetPhoto()
-        }*/
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT ID, NameInEnglish FROM COMPANY ORDER BY NameInEnglish", Connect.ToDatabase());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Connect.Close();
+            }
+            return dt;
+        }
         public static DataTable FilterListBranch(FilterEntity filterEntity)
         {
             DataTable dataTable = new DataTable();
             StringBuilder query = new StringBuilder();
-            query.Append("SELECT * FROM BRANCH")
-                .AppendFormat("WHERE (Name LIKE N'%{0}%' ", filterEntity.Keyword);
+            query.Append("SELECT * FROM BRANCH ")
+                .AppendFormat("WHERE Active = '{0}' ", filterEntity.Active);
+            if (!string.IsNullOrWhiteSpace(filterEntity.Keyword))
+            {
+                query.AppendFormat("AND Name LIKE N'%{0}%' ", filterEntity.Keyword);
+            }
             if (filterEntity.FromDate != null && filterEntity.ToDate != null)
             {
-                query.AppendFormat("OR (CONVERT(DATE, CreateDate) >= CONVERT(DATE, '{0}'))", filterEntity.FromDate)
-                     .AppendFormat("AND (CONVERT(DATE, CreateDate) <= CONVERT(DATE, '{0}'))", filterEntity.ToDate);
+                query.AppendFormat("AND ((CONVERT(DATE, CreatedDate) >= CONVERT(DATE, '{0}')) ", filterEntity.FromDate)
+                     .AppendFormat("AND (CONVERT(DATE, CreatedDate) <= CONVERT(DATE, '{0}'))) ", filterEntity.ToDate);
             }
-            query.AppendFormat("AND Active = '{0}'", filterEntity.Active);
             try
             {
                 SqlCommand cmd = new SqlCommand(query.ToString(), Connect.ToDatabase());
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dataTable);
                 da.Dispose();
             }
             catch (Exception exception)
@@ -48,7 +69,9 @@ namespace ProjectManagement.Branch.Dao
             }
             return dataTable;
         }
-        public static BranchEntity GetByID(Guid id)
+
+
+        public static BranchEntity GetById(Guid? id)
         {
             BranchEntity branchEntity = new BranchEntity();
             try
@@ -67,6 +90,7 @@ namespace ProjectManagement.Branch.Dao
                         branchEntity.Phone = reader["Phone"].ToString();
                         branchEntity.Location = reader["Location"].ToString();
                         branchEntity.Active = bool.Parse(reader["Active"].ToString());
+                        branchEntity.CompanyId = (Guid)reader["CompanyId"];
 
                     }
                 reader.Close();
@@ -79,7 +103,7 @@ namespace ProjectManagement.Branch.Dao
             {
               //  if (Connect.ToDatabase().State != ConnectionState.Close)
                 {
-                    Connect.ToDatabase().Close();
+                    Connect.Close();
                 }
             }
             return branchEntity;
@@ -97,6 +121,7 @@ namespace ProjectManagement.Branch.Dao
                 com.Parameters.AddWithValue("@Phone", branchEntity.Phone);
                 com.Parameters.AddWithValue("@Location", branchEntity.Location);
                 com.Parameters.AddWithValue("@Active", branchEntity.Active);
+                com.Parameters.AddWithValue("@CompanyId", branchEntity.CompanyId);
                 com.Parameters.AddWithValue("@CreatedBy", branchEntity.CreatedBy);
                 com.Parameters.AddWithValue("@CreatedDate", branchEntity.CreatedDate);
                 com.ExecuteNonQuery();
@@ -125,8 +150,9 @@ namespace ProjectManagement.Branch.Dao
                 com.Parameters.AddWithValue("@Phone", branchEntity.Phone);
                 com.Parameters.AddWithValue("@Location", branchEntity.Location);
                 com.Parameters.AddWithValue("@Active", branchEntity.Active);
-                com.Parameters.AddWithValue("@CreatedBy", branchEntity.CreatedBy);
-                com.Parameters.AddWithValue("@CreatedDate", branchEntity.CreatedDate);
+                com.Parameters.AddWithValue("@CompanyId", branchEntity.CompanyId);
+                com.Parameters.AddWithValue("@UpdatedBy", branchEntity.UpdatedBy);
+                com.Parameters.AddWithValue("@UpdatedDate", branchEntity.UpdatedDate);
                 com.ExecuteNonQuery();
             }
             catch (Exception exception)
@@ -140,6 +166,30 @@ namespace ProjectManagement.Branch.Dao
                     Connect.ToDatabase().Close();
                 }
             }
+        }
+        public static bool CheckExistName(string name)
+        {
+            bool isExist = false;
+            try
+            {
+                string query = string.Format("SELECT COUNT(*) FROM BRANCH WHERE Name ='{0}' AND Active = 'True'", name);
+                SqlCommand cmd = new SqlCommand(query, Connect.ToDatabase());
+                cmd.CommandTimeout = 10000;
+                var itExists = (Int32)cmd.ExecuteScalar() > 1;
+                if (itExists)
+                {
+                    isExist = true;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), @"Error", MessageBoxButtons.RetryCancel);
+            }
+            finally
+            {
+                Connect.Close();
+            }
+            return isExist;
         }
 
     }

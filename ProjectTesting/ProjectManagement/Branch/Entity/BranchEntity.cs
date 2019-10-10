@@ -10,5 +10,6 @@ namespace ProjectManagement.Branch.Entity
         public string Phone { get; set; }
         public string Location { get; set; }
         public bool Active { get; set; }
+        public Guid CompanyId { get; set; }
     }
 }
