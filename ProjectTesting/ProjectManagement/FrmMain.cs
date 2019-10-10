@@ -16,6 +16,9 @@ namespace ProjectManagement
         public FrmMain()
         {
             InitializeComponent();
+            timer1.Start();
+            lblDate.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void BtnExit_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
@@ -106,6 +109,11 @@ namespace ProjectManagement
             panelList.Controls.Add(frm);
             panelList.Visible = true;
             frm.Show();
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }

@@ -70,9 +70,17 @@
             this.uiPanelManager1 = new Janus.Windows.UI.Dock.UIPanelManager(this.components);
             this.panelList = new Janus.Windows.UI.Dock.UIPanelGroup();
             this.ribbonGroup1 = new Janus.Windows.Ribbon.RibbonGroup();
+            this.panelFoot = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblShift = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelList)).BeginInit();
+            this.panelFoot.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -417,7 +425,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 207), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 279), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -427,7 +435,7 @@
             this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
             this.panelList.Location = new System.Drawing.Point(3, 166);
             this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(721, 207);
+            this.panelList.Size = new System.Drawing.Size(721, 279);
             this.panelList.TabIndex = 4;
             this.panelList.Text = "Panel 0";
             // 
@@ -438,12 +446,83 @@
             this.ribbonGroup1.Name = "ribbonGroup1";
             this.ribbonGroup1.Text = "Group 0";
             // 
+            // panelFoot
+            // 
+            this.panelFoot.Controls.Add(this.label1);
+            this.panelFoot.Controls.Add(this.lblShift);
+            this.panelFoot.Controls.Add(this.lblDate);
+            this.panelFoot.Controls.Add(this.lblTime);
+            this.panelFoot.Controls.Add(this.lblUser);
+            this.panelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelFoot.Location = new System.Drawing.Point(0, 448);
+            this.panelFoot.Name = "panelFoot";
+            this.panelFoot.Size = new System.Drawing.Size(727, 29);
+            this.panelFoot.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Hanuman", 7F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(197, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(460, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Copyright © 2009 - All rights reserved.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblShift
+            // 
+            this.lblShift.AutoSize = true;
+            this.lblShift.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblShift.Location = new System.Drawing.Point(110, 0);
+            this.lblShift.Name = "lblShift";
+            this.lblShift.Size = new System.Drawing.Size(87, 17);
+            this.lblShift.TabIndex = 3;
+            this.lblShift.Text = "Shift : Morning";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblDate.Location = new System.Drawing.Point(657, 0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(34, 17);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "Date";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTime.Location = new System.Drawing.Point(691, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(36, 17);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblUser.Location = new System.Drawing.Point(0, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(110, 17);
+            this.lblUser.TabIndex = 0;
+            this.lblUser.Text = "Username : Admin";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 376);
+            this.ClientSize = new System.Drawing.Size(727, 477);
             this.Controls.Add(this.panelList);
+            this.Controls.Add(this.panelFoot);
             this.Controls.Add(this.ribbon1);
             this.Font = new System.Drawing.Font("Hanuman", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -457,6 +536,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelList)).EndInit();
+            this.panelFoot.ResumeLayout(false);
+            this.panelFoot.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -503,5 +584,12 @@
         private Janus.Windows.Ribbon.DropDownCommand cmdBranch;
         private Janus.Windows.Ribbon.RibbonGroup ribbonGroup5;
         private Janus.Windows.Ribbon.ButtonCommand buttonCommand1;
+        private System.Windows.Forms.Panel panelFoot;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblShift;
+        private System.Windows.Forms.Label label1;
     }
 }
