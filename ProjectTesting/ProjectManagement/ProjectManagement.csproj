@@ -55,6 +55,20 @@
   <ItemGroup>
     <Compile Include="BaseObject\BaseClass.cs" />
     <Compile Include="BaseObject\FilterEntity.cs" />
+    <Compile Include="Branch\Dao\BranchDao.cs" />
+    <Compile Include="Branch\Entity\BranchEntity.cs" />
+    <Compile Include="Branch\View\FrmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\View\FrmBranch.Designer.cs">
+      <DependentUpon>FrmBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\View\FrmBranchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\View\FrmBranchList.Designer.cs">
+      <DependentUpon>FrmBranchList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category\Dao\CategoryDao.cs" />
     <Compile Include="Category\Entity\CategoryEntity.cs" />
     <Compile Include="Category\View\FrmCategory.cs">
@@ -195,6 +209,12 @@
     <Compile Include="UserManagement\User\View\FrmUserList.Designer.cs">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Branch\View\FrmBranch.resx">
+      <DependentUpon>FrmBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\View\FrmBranchList.resx">
+      <DependentUpon>FrmBranchList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Category\View\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +365,8 @@
     <Content Include="Resources\16\void.png" />
     <Content Include="Resources\16\voided.png" />
     <Content Include="Resources\16\walk-in.png" />
+    <None Include="Resources\22794357_503570836692010_1507685141831483392_n.jpg" />
+    <None Include="Resources\240_F_282792498_DyK7hyYaIPS10xjwqaxxXKRRO4cxjCem.jpg" />
     <Content Include="Resources\24\aba 32x32.png" />
     <Content Include="Resources\24\about 24x24.png" />
     <Content Include="Resources\24\accounting_interface 24x24.png" />
@@ -451,6 +473,10 @@
     <Content Include="Resources\24\user_account 24x24.png" />
     <Content Include="Resources\24\utilities 24x24.png" />
     <Content Include="Resources\24\visa.png" />
+    <None Include="Resources\b6f170563350682fa842eb51d829774f.jpg" />
+    <None Include="Resources\bobapins_1024x1024.jpg" />
+    <None Include="Resources\b6f170563350682fa842eb51d829774f1.jpg" />
+    <None Include="Resources\cute-couple-bubble-milk-ice-tea-plastic-container-banner_33403-197.jpg" />
     <Content Include="Resources\enter_2_25px.png" />
     <Content Include="Resources\excel.jpg" />
     <Content Include="Resources\loading.gif" />
@@ -474,6 +500,7 @@
     <Content Include="Resources\POS\voucher_42.png" />
     <Content Include="Resources\Queek Pos.png" />
     <Content Include="Resources\question.png" />
+    <None Include="Resources\Thumbnail_2019_February12.jpg" />
     <Content Include="Resources\upgrade_card.png" />
     <Content Include="Resources\upset128.png" />
     <Content Include="Database\Davin\Davin Alter.sql" />

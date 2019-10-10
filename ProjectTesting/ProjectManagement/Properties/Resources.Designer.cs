@@ -63,6 +63,26 @@ namespace ProjectManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22794357_503570836692010_1507685141831483392_n {
+            get {
+                object obj = ResourceManager.GetObject("22794357_503570836692010_1507685141831483392_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _240_F_282792498_DyK7hyYaIPS10xjwqaxxXKRRO4cxjCem {
+            get {
+                object obj = ResourceManager.GetObject("240_F_282792498_DyK7hyYaIPS10xjwqaxxXKRRO4cxjCem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_16x16 {
             get {
                 object obj = ResourceManager.GetObject("add 16x16", resourceCulture);
@@ -73,9 +93,49 @@ namespace ProjectManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b6f170563350682fa842eb51d829774f {
+            get {
+                object obj = ResourceManager.GetObject("b6f170563350682fa842eb51d829774f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b6f170563350682fa842eb51d829774f1 {
+            get {
+                object obj = ResourceManager.GetObject("b6f170563350682fa842eb51d829774f1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bobapins_1024x1024 {
+            get {
+                object obj = ResourceManager.GetObject("bobapins_1024x1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cute_couple_bubble_milk_ice_tea_plastic_container_banner_33403_197 {
+            get {
+                object obj = ResourceManager.GetObject("cute-couple-bubble-milk-ice-tea-plastic-container-banner_33403-197", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +216,16 @@ namespace ProjectManagement.Properties {
         internal static System.Drawing.Bitmap text_add {
             get {
                 object obj = ResourceManager.GetObject("text_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thumbnail_2019_February12 {
+            get {
+                object obj = ResourceManager.GetObject("Thumbnail_2019_February12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
