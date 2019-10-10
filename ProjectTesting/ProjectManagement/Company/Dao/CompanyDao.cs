@@ -22,15 +22,17 @@ namespace ProjectManagement.Company.Dao
             DataTable dataTable = new DataTable();
             StringBuilder query = new StringBuilder();
             query.Append("SELECT * FROM COMPANY ")
-                .AppendFormat("WHERE (NameInKhmer LIKE N'%{0}%' ", filterEntity.Keyword)
+                 .AppendFormat("WHERE Active = '{0}'", filterEntity.Active);
+            if (!string.IsNullOrWhiteSpace(filterEntity.Keyword))
+            {
+                query.AppendFormat(" AND (NameInKhmer LIKE N'%{0}%' ", filterEntity.Keyword)
                 .AppendFormat("OR NameInEnglish LIKE '%{0}%') ", filterEntity.Keyword);
+            }
             if (filterEntity.FromDate != null && filterEntity.ToDate != null)
             {
-                query.AppendFormat("OR (CONVERT(DATE, CreatedDate) >= CONVERT(DATE, '{0}') ", filterEntity.FromDate)
+                query.AppendFormat("AND (CONVERT(DATE, CreatedDate) >= CONVERT(DATE, '{0}') ", filterEntity.FromDate)
                     .AppendFormat(" AND CONVERT(DATE, CreatedDate) <= CONVERT(DATE, '{0}')) ", filterEntity.ToDate);
             }
-
-            query.AppendFormat("AND Active = '{0}'", filterEntity.Active);
             try
             {
                 SqlCommand cmd = new SqlCommand(query.ToString(), Connect.ToDatabase());
