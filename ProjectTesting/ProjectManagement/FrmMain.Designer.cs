@@ -88,7 +88,7 @@
             this.ribbon1.HelpButton.Key = "HelpButton";
             this.ribbon1.Location = new System.Drawing.Point(0, 0);
             this.ribbon1.Name = "ribbon1";
-            this.ribbon1.Size = new System.Drawing.Size(727, 163);
+            this.ribbon1.Size = new System.Drawing.Size(727, 159);
             // 
             // 
             // 
@@ -415,7 +415,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 206), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 210), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -423,9 +423,9 @@
             // 
             this.panelList.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.True;
             this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
-            this.panelList.Location = new System.Drawing.Point(3, 166);
+            this.panelList.Location = new System.Drawing.Point(3, 162);
             this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(721, 206);
+            this.panelList.Size = new System.Drawing.Size(721, 210);
             this.panelList.TabIndex = 4;
             this.panelList.Text = "Panel 0";
             // 

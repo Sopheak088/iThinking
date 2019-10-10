@@ -24,9 +24,21 @@ namespace ProjectManagement.Helper
                     con.Open();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                try
+                {
+                    con = new SqlConnection(ConfigurationManager.AppSettings["Connection_PC"]);
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
             }
             return con;
         }
