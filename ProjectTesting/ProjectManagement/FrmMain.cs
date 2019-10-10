@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProjectManagement.Branch.View;
 using ProjectManagement.Category.View;
 using ProjectManagement.Company.View;
 using ProjectManagement.Customer.View;
@@ -86,6 +87,22 @@ namespace ProjectManagement
         private void BtnMemberShip_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
         {
             FrmMemberShipList frm = new FrmMemberShipList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void CmdBranch_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmBranchList frm = new FrmBranchList { TopLevel = false, AutoScroll = true };
+            panelList.Controls.Add(frm);
+            panelList.Visible = true;
+            frm.Show();
+        }
+
+        private void CmdAddBranch_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            FrmBranch frm = new FrmBranch { TopLevel = false, AutoScroll = true };
             panelList.Controls.Add(frm);
             panelList.Visible = true;
             frm.Show();
