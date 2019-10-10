@@ -55,20 +55,6 @@
   <ItemGroup>
     <Compile Include="BaseObject\BaseClass.cs" />
     <Compile Include="BaseObject\FilterEntity.cs" />
-    <Compile Include="Branch\Dao\BranchDao.cs" />
-    <Compile Include="Branch\Entity\BranchEntity.cs" />
-    <Compile Include="Branch\View\FrmBranch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Branch\View\FrmBranch.Designer.cs">
-      <DependentUpon>FrmBranch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Branch\View\FrmBranchList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Branch\View\FrmBranchList.Designer.cs">
-      <DependentUpon>FrmBranchList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\Dao\CompanyDao.cs" />
     <Compile Include="Company\Entity\CompanyEntity.cs" />
     <Compile Include="Company\View\FrmCompanyList.cs">
@@ -82,6 +68,20 @@
     </Compile>
     <Compile Include="Company\View\FrmCompany.Designer.cs">
       <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Dao\CustomerDao.cs" />
+    <Compile Include="Customer\Entity\CustomerEntity.cs" />
+    <Compile Include="Customer\View\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\View\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\View\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogIn.cs">
       <SubType>Form</SubType>
@@ -98,10 +98,58 @@
     <Compile Include="Helper\Connect.cs" />
     <Compile Include="Helper\Helpers.cs" />
     <Compile Include="Helper\StringCipher.cs" />
+    <Compile Include="Invoice\Dao\InvoiceDao.cs" />
+    <Compile Include="Invoice\Entity\InvoiceEntity.cs" />
+    <Compile Include="Invoice\View\FrmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\View\FrmInvoice.Designer.cs">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\View\FrmInvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\View\FrmInvoiceList.Designer.cs">
+      <DependentUpon>FrmInvoiceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\COMPANY.cs" />
     <Compile Include="Manager\CONFIG.cs" />
     <Compile Include="Manager\MANAGE_ROLE.cs" />
     <Compile Include="Manager\USER.cs" />
+    <Compile Include="MemberShip\Dao\MembershipDao.cs" />
+    <Compile Include="MemberShip\Entity\MemberShipEntity.cs" />
+    <Compile Include="MemberShip\View\FrmMemberShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberShip\View\FrmMemberShip.Designer.cs">
+      <DependentUpon>FrmMemberShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberShip\View\FrmMemberShipList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberShip\View\FrmMemberShipList.Designer.cs">
+      <DependentUpon>FrmMemberShipList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Dao\ProductDao.cs" />
+    <Compile Include="Product\Entity\ProductEntity.cs" />
+    <Compile Include="Product\View\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\View\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\View\FrmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\View\FrmProductList.Designer.cs">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserManagement\ClassDao\SelectPicture.cs" />
@@ -133,23 +181,38 @@
     <Compile Include="UserManagement\User\View\FrmUserList.Designer.cs">
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Branch\View\FrmBranch.resx">
-      <DependentUpon>FrmBranch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Branch\View\FrmBranchList.resx">
-      <DependentUpon>FrmBranchList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Company\View\FrmCompanyList.resx">
       <DependentUpon>FrmCompanyList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\View\FrmCompany.resx">
       <DependentUpon>FrmCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\View\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberShip\View\FrmMemberShip.resx">
+      <DependentUpon>FrmMemberShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberShip\View\FrmMemberShipList.resx">
+      <DependentUpon>FrmMemberShipList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\View\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\View\FrmProductList.resx">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

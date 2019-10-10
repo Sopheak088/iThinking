@@ -152,5 +152,28 @@ namespace ProjectTesting.Product.Dao
             }
             return dt;
         }
+
+        public static DataTable ListAllProductByName(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                SqlCommand cmd = new SqlCommand("SearchCustomerByName", Connection.ToDatabase());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@name", search);
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dt);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), @"Could not find store procedure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Connection.ToDatabase();
+            }
+            return dt;
+        }
     }
 }

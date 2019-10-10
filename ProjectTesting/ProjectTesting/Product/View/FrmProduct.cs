@@ -120,21 +120,14 @@ namespace ProjectTesting.Product.View
         {
             try
             {
-                string query = "SELECT ID, Category FROM CATEGORY";
-
-                SqlDataAdapter da = new SqlDataAdapter(query, Connection.ToDatabase());
-                DataSet ds = new DataSet();
-                DataTable dataTable = new DataTable();
-                da.Fill(dataTable);
-                da.Dispose();
                 cboCategory.DisplayMember = "Category";
                 cboCategory.ValueMember = "ID";
-                //  cboCategory.DataSource = dataTable;
+                cboCategory.DataSource = ProductDao.GetProductToComboBox();
             }
             catch (Exception ex)
             {
                 // write exception info to log or anything else
-                MessageBox.Show("Error occured!");
+                MessageBox.Show("Error occured!" + ex);
             }
             Connection.ToDatabase().Close();
         }

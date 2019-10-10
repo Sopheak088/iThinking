@@ -102,6 +102,11 @@ namespace ProjectManagement.Manager
         //Sell
         public static bool ALLOW_SELL { get; set; }
 
+        public static bool ALLOW_ADD_MEMBERSHIP { get; set; }
+
+        public static bool ALLOW_EDIT_MEMBERSHIP { get; set; }
+        public static bool ALLOW_VIEW_MEMBERSHIP { get; set; }
+
         public static void LoadRole()
         {
             //Company
@@ -166,6 +171,11 @@ namespace ProjectManagement.Manager
             ALLOW_VIEW_INVOICE = true;
             //Sell
             ALLOW_SELL = true;
+            //
+            ALLOW_ADD_MEMBERSHIP = true;
+
+            ALLOW_EDIT_MEMBERSHIP = true;
+            ALLOW_VIEW_MEMBERSHIP = true;
         }
     }
 }
