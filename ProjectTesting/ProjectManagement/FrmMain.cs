@@ -21,8 +21,21 @@ namespace ProjectManagement
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
         private void BtnExit_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void BtnLogout_Click(object sender, Janus.Windows.Ribbon.CommandEventArgs e)
+        {
+            this.Hide();
+            FrmLogIn frm = new FrmLogIn();
+            frm.ShowDialog();
             this.Close();
         }
 
@@ -38,7 +51,7 @@ namespace ProjectManagement
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Are you sure to close?", "Close Sale Inventory",
+            if (MessageBox.Show("Are you sure to close?", "Cafe",
                     MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true;
@@ -109,11 +122,6 @@ namespace ProjectManagement
             panelList.Controls.Add(frm);
             panelList.Visible = true;
             frm.Show();
-        }
-
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }

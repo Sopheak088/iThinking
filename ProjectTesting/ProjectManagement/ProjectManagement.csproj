@@ -401,6 +401,7 @@
     <Content Include="Resources\24\database_restore 24x24.png" />
     <Content Include="Resources\24\deactivate_key 24x24.png" />
     <Content Include="Resources\24\delete 24x24.png" />
+    <Content Include="Resources\24\DeleteRed.png" />
     <Content Include="Resources\24\desk_folio 24x24.png" />
     <Content Include="Resources\24\dollar-bill.png" />
     <Content Include="Resources\24\employee.png" />
@@ -421,7 +422,9 @@
     <Content Include="Resources\24\import.png" />
     <Content Include="Resources\24\inhouse 24x24.png" />
     <Content Include="Resources\24\invoice_setup.png" />
+    <Content Include="Resources\24\Key.png" />
     <Content Include="Resources\24\leave_message 24x24.png" />
+    <Content Include="Resources\24\Log Out.png" />
     <Content Include="Resources\24\lost_found 24x24.png" />
     <Content Include="Resources\24\maintenance_list 24x24.png" />
     <Content Include="Resources\24\master_invoice_option 24x24.png" />
@@ -481,6 +484,7 @@
     <Content Include="Resources\excel.jpg" />
     <Content Include="Resources\loading.gif" />
     <Content Include="Resources\Logo Green.png" />
+    <Content Include="Resources\Main\coffee_cappuccino_cup.ico" />
     <Content Include="Resources\Main\imgbin-creative-coffee-icon-design-99y49qSCDDA0GrmWxMjk7Z1pR.jpg" />
     <Content Include="Resources\msg_exclamation.png" />
     <Content Include="Resources\msg_question.png" />

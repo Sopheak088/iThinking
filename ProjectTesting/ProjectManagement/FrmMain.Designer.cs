@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ribbon1 = new Janus.Windows.Ribbon.Ribbon();
+            this.btnLogout = new Janus.Windows.Ribbon.DropDownCommand();
+            this.dropDownCommand5 = new Janus.Windows.Ribbon.DropDownCommand();
             this.btnExit = new Janus.Windows.Ribbon.DropDownCommand();
             this.tabCusomerAndSale = new Janus.Windows.Ribbon.RibbonTab();
             this.groupCustomer = new Janus.Windows.Ribbon.RibbonGroup();
@@ -76,11 +78,13 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelList)).BeginInit();
             this.panelFoot.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -88,6 +92,8 @@
             this.ribbon1.BackstageMenuData = "<?xml version=\"1.0\" encoding=\"utf-8\"?><BackstageMenu><ImageKey /><Key /><Text>Fil" +
     "e</Text></BackstageMenu>";
             this.ribbon1.ControlBoxMenu.LeftCommands.AddRange(new Janus.Windows.Ribbon.CommandBase[] {
+            this.btnLogout,
+            this.dropDownCommand5,
             this.btnExit});
             // 
             // 
@@ -112,10 +118,30 @@
             this.tabSystemAndManagement});
             this.ribbon1.Text = "";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Key = "dropDownCommand1";
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftL;
+            this.btnLogout.SizeStyle = Janus.Windows.Ribbon.CommandSizeStyle.Small;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnLogout_Click);
+            // 
+            // dropDownCommand5
+            // 
+            this.dropDownCommand5.Image = ((System.Drawing.Image)(resources.GetObject("dropDownCommand5.Image")));
+            this.dropDownCommand5.Key = "dropDownCommand5";
+            this.dropDownCommand5.Name = "dropDownCommand5";
+            this.dropDownCommand5.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftC;
+            this.dropDownCommand5.Text = "Change Password";
+            // 
             // btnExit
             // 
-            this.btnExit.Key = "dropDownCommand1";
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Key = "dropDownCommand6";
             this.btnExit.Name = "btnExit";
+            this.btnExit.Shortcut = System.Windows.Forms.Shortcut.CtrlX;
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new Janus.Windows.Ribbon.CommandEventHandler(this.BtnExit_Click);
             // 
@@ -425,7 +451,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 279), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, Janus.Windows.UI.Dock.PanelDockStyle.Fill, true, new System.Drawing.Size(721, 284), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("787c1c43-3b1f-4e86-ba20-1138e26e9c31"), Janus.Windows.UI.Dock.PanelGroupStyle.Tab, true, new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -435,7 +461,7 @@
             this.panelList.GroupStyle = Janus.Windows.UI.Dock.PanelGroupStyle.Tab;
             this.panelList.Location = new System.Drawing.Point(3, 166);
             this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(721, 279);
+            this.panelList.Size = new System.Drawing.Size(721, 284);
             this.panelList.TabIndex = 4;
             this.panelList.Text = "Panel 0";
             // 
@@ -453,8 +479,9 @@
             this.panelFoot.Controls.Add(this.lblDate);
             this.panelFoot.Controls.Add(this.lblTime);
             this.panelFoot.Controls.Add(this.lblUser);
+            this.panelFoot.Controls.Add(this.pictureBox1);
             this.panelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFoot.Location = new System.Drawing.Point(0, 448);
+            this.panelFoot.Location = new System.Drawing.Point(0, 453);
             this.panelFoot.Name = "panelFoot";
             this.panelFoot.Size = new System.Drawing.Size(727, 29);
             this.panelFoot.TabIndex = 5;
@@ -464,18 +491,18 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("Hanuman", 7F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(197, 17);
+            this.label1.Location = new System.Drawing.Point(235, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 12);
+            this.label1.Size = new System.Drawing.Size(422, 12);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Copyright © 2009 - All rights reserved.";
+            this.label1.Text = "Copyright © 2019 - All rights reserved.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblShift
             // 
             this.lblShift.AutoSize = true;
             this.lblShift.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblShift.Location = new System.Drawing.Point(110, 0);
+            this.lblShift.Location = new System.Drawing.Point(148, 0);
             this.lblShift.Name = "lblShift";
             this.lblShift.Size = new System.Drawing.Size(87, 17);
             this.lblShift.TabIndex = 3;
@@ -504,12 +531,24 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblUser.Location = new System.Drawing.Point(0, 0);
+            this.lblUser.Location = new System.Drawing.Point(38, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(110, 17);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Username : Admin";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::ProjectManagement.Properties.Resources.imgbin_creative_coffee_icon_design_99y49qSCDDA0GrmWxMjk7Z1pR;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 
@@ -520,7 +559,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 477);
+            this.ClientSize = new System.Drawing.Size(727, 482);
             this.Controls.Add(this.panelList);
             this.Controls.Add(this.panelFoot);
             this.Controls.Add(this.ribbon1);
@@ -529,15 +568,15 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sale Inventory";
+            this.Text = "Cafe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelList)).EndInit();
             this.panelFoot.ResumeLayout(false);
             this.panelFoot.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,7 +591,7 @@
         private Janus.Windows.Ribbon.RibbonTab Product;
         private Janus.Windows.Ribbon.RibbonTab tabAccountant;
         private Janus.Windows.Ribbon.RibbonTab tabSystemAndManagement;
-        private Janus.Windows.Ribbon.DropDownCommand btnExit;
+        private Janus.Windows.Ribbon.DropDownCommand btnLogout;
         private Janus.Windows.Ribbon.RibbonGroup ribbonGroup1;
         private Janus.Windows.Ribbon.RibbonGroup groupCustomer;
         private Janus.Windows.Ribbon.ButtonCommand cmdCustomerProfile;
@@ -591,5 +630,8 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblShift;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Janus.Windows.Ribbon.DropDownCommand dropDownCommand5;
+        private Janus.Windows.Ribbon.DropDownCommand btnExit;
     }
 }

@@ -15,7 +15,8 @@ namespace ProjectTesting.Helper
             SqlConnection con = new SqlConnection();
             try
             {
-                con = new SqlConnection("Data Source=.; Initial Catalog=DBTest; Integrated Security=true;");
+                //Data Source=.; Initial Catalog=DBTEST; Integrated Security=true;
+                con = new SqlConnection("Data Source=.; Initial Catalog=CAFE; Integrated Security=true;");
                 con.Open();
             }
             catch (Exception ex)

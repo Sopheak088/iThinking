@@ -33,8 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Janus.Data.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
     <Reference Include="Janus.Windows.CalendarCombo.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.Common.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.UI.v4, Version=4.0.52.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
     <Reference Include="System" />
@@ -116,6 +118,12 @@
     <Compile Include="Supplier\View\FrmSupplier.Designer.cs">
       <DependentUpon>FrmSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test\FrmGridCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\FrmGridCombo.Designer.cs">
+      <DependentUpon>FrmGridCombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\Dao\UserDao.cs" />
     <Compile Include="User\Entity\UserEntity.cs" />
     <Compile Include="User\View\FrmUserList.cs">
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier\View\FrmSupplier.resx">
       <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\FrmGridCombo.resx">
+      <DependentUpon>FrmGridCombo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\View\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>

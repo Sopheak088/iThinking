@@ -74,14 +74,14 @@ namespace ProjectManagement.Helper
             return (photo);
         }
 
-        public static bool CheckEmpty(System.Windows.Forms.ErrorProvider ep,
+        public static bool CheckEmpty(ErrorProvider ep,
             params Control[] ctr)
         {
             int n = ctr.GetUpperBound(0);
             bool b = false;
             for (int i = 0; i <= n; i++)
             {
-                if (ctr[i].Text == "")
+                if (string.IsNullOrWhiteSpace(ctr[i].Text))
                 {
                     ep.SetError(ctr[i], "Missing Value");// + ctr[i].Tag //You can enter tag all control
                     // ctr[i].Name.Substring(3, ctr[i].Name.Length - 3));

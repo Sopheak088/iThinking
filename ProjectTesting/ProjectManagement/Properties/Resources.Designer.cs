@@ -163,6 +163,16 @@ namespace ProjectManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgbin_creative_coffee_icon_design_99y49qSCDDA0GrmWxMjk7Z1pR {
+            get {
+                object obj = ResourceManager.GetObject("imgbin-creative-coffee-icon-design-99y49qSCDDA0GrmWxMjk7Z1pR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photos {
             get {
                 object obj = ResourceManager.GetObject("photos", resourceCulture);
